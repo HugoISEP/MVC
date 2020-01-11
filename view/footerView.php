@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/footer.css"/>
 </head>
 
+
 <footer>
     <div id="autre">
         <a href="#">Language</a>
