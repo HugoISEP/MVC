@@ -1,0 +1,57 @@
+footer {
+	position: absolute; 
+	bottom: 0; 
+	left: 0; 
+	right: 0 ;
+    color: white;
+	display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #223150;
+    height: 15vh;
+    min-height: 70px;
+}
+
+footer li {
+   list-style: none;
+}
+
+footer ul {
+    padding-right: 5%;
+    margin-top: -5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+footer a:active{
+    color: grey;
+ }
+
+footer h3{
+    padding-top: 3%;
+    font-size: 0.9em;
+}
+
+footer #bloc_réseaux_sociaux{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+footer #autre{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+
+

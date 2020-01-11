@@ -1,0 +1,44 @@
+#conteneur{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#box{
+    text-align: center;
+    width: 70%;
+    max-height: 80%;
+    border: 2px black solid;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: white;
+}
+
+.mail{
+    border: 1px black solid;
+    list-style: none;
+    border-radius: 2px;
+    display: flex;
+    height: 125px;
+    flex-direction: row;
+    position: relative;
+
+    width: 90%;
+    padding-right: 5%;
+    margin-bottom:15px;
+    margin-left:0;
+    padding-left:0;
+    margin-right: 5%;
+    margin-top: 1%;
+
+}
+
+.NomExpediteur{
+    display: flex;
+    flex-direction: column;
+
+    border-color: black;
+    align-items: center;
+}

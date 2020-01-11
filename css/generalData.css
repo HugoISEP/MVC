@@ -1,0 +1,12 @@
+#bloque_principal {
+    width: 75%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+#image_graphique, #bouton_graphique {
+    text-align: center;
+}

@@ -1,0 +1,40 @@
+.captor
+{
+	margin-left:30%;
+	margin-right:20%;
+}
+
+#titre
+{
+	font-size:350%;
+}
+
+.trait
+{
+	width:100%;
+}
+
+.bouton
+{
+    padding: 6px;
+    font: bold 13px "Courier New";
+    background: #f5f5f5;
+    color: #555;
+    border-radius: 2px;
+    /*border-radius:8px;*/
+    width: 100px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+}
+
+.bouton:hover {
+    padding: 6px;
+    width: 100px;
+    font: bold 13px "Courier New";
+    background: #478bf9;
+    color: #fff;
+    border-radius: 2px;
+    /*border-radius:8px;*/
+    border: 1px solid #ccc;
+    transition: linear 150ms;
+}

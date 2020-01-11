@@ -1,0 +1,54 @@
+.box {
+    border: none;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    margin: auto;
+}
+
+h1 {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding-top: 3%;
+    color: red;
+    margin: 4% auto 7%;
+}
+
+#gender {
+    margin-left: 7%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+label[for = "last_name"] {
+    margin-left: 2px;
+}
+
+label[for = "mail"] {
+    margin-left: 8px;
+}
+
+label[for = "pass"] {
+    margin-left: 12px;
+}
+
+label[for = "confirm_pass"] {
+    margin-left: -80px;
+}
+
+label[class = "age"] {
+    margin-left: -127px;
+}
+
+label[for = "center"] {
+    margin-left: -38px;
+}
+
+label[class = "number"] {
+    margin-left: -160px;
+}
+
+label[for = "ID_photo"] {
+    margin-left: 2px;
+}

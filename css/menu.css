@@ -1,0 +1,196 @@
+body{
+	margin-top: 5%;
+	padding: 0%;
+	/* background : linear-gradient(to top, white 20%, lightskyblue); */
+	background : lightgrey;
+}
+
+header{
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	right: 0 ;
+}
+
+
+
+header .poutre {
+	text-align : center;
+	display:flex; /*Afficher les rubriques en ligne*/
+	flex-wrap: nowrap; /*Pas de retour a la ligne lors de la baisse de la taille de la page, voir si cela marche avec les pourcentages*/
+	text-decoration: none;
+	height:40px;
+}
+
+header .texte {
+	flex : 1;
+	min-width: 180px;
+	padding-top : 8px;
+	border-left: 1px solid black; /*Separation des différentes rubriques*/
+	border-right: 1px solid black;
+	/* border-bottom : 2px solid black; */
+}
+
+header .texte:hover a{
+	color: white;
+	font-weight: bold;
+}
+
+header .texte:hover {
+	background-color : #223150;
+	transition: linear 150ms;
+	border-bottom : none; 
+}
+
+header .texte:active {
+	opacity : 0.30;
+}
+
+header #BoutonMenuDeroulant {
+	width :30px;
+	height : 30px;
+}
+
+
+header .boutonMenu {
+	width: 180px;
+	padding-top : 5px;
+	min-width: 180px;
+	border-right: 1px solid black;
+}
+
+header a{
+	text-decoration: none;
+	color : black;
+}
+
+header .texte:active a{ /*Lors du clic sur le bouton si on veut mettre une petite animation*/
+}
+
+/*changement de couleur du texte un peu et background(opacité),
+ texte qui grossis plus,
+ chnager couleur pas comme l'autre (3)*/
+/* ____________________________________________________________________________________________________________________________________________________________*/
+
+
+header nav.menu{
+width: 180px; /*Largeur*/
+background-color: #223150; /*Couleur*/
+position : absolute;
+animation: mymove 663ms;
+}
+
+header #TEST {animation-timing-function: ease-out;}
+
+@keyframes mymove {
+  from {left: -180px;}
+  to {left: 0px;}
+}
+
+header .show {display:none;}
+
+header nav.menu > ul { /*placement du menu deroulant sur la page*/
+margin: 0%;
+padding: 0%;
+}
+
+header nav.menu > ul::after { /* Ce à quoi va ressembler le menu déroulant, le bas de menu*/
+content: "";
+display: block;
+clear: both;
+}
+
+header nav.menu > ul > li { 
+float : left; /*Placement du texte dans les cases : dans le cas des grandes parties*/
+position: relative;
+}
+
+header nav.menu > ul > li > a { /*tailles des cases des grandes parties emplacement du texte dans sa "case"*/
+padding: 20px 30px;
+color: #FFF;
+}
+
+header nav.menu > ul > li:hover a { /*décalage et mise en place des grandes parties lors du passage de la souris dessus */
+padding: 20px 30px 20px 30px;
+}
+
+header nav.menu li { /* Cacher les puces des sous parties*/
+list-style-type: none;
+}
+
+header .submenu { /*Cacher les sous parties*/
+display: none;
+}
+
+header nav.menu a { /* Créer les grandes parties en bloc*/
+display: inline-block;
+text-decoration: none;
+}
+
+header nav.menu li:hover .submenu { /*Affichage des sous partie lors du passage de la souris */
+display: inline-block;
+position: absolute;
+top: 0%;
+left: 100%;
+}
+
+header .submenu li { /*Separer les différentes sous parties avec des traits*/
+border-bottom: 1px solid #CCC;
+width: 100%; /* A voir si je le met*/
+}
+
+header .submenu li a { /* couleur du texte dans les sous parties*/
+color: white;
+}
+
+header .My_account:hover { /* Passage de la souris sur la partie My account ( bord plus couleur, A revoir avec le graphiste) et solid pour le type de trait*/
+background-color: #4d5a7c;
+width : 100%;
+}
+
+header .About_Us:hover {/* Passage de la souris sur la partie About Us (bord plus couleur, A revoir avec le graphiste) */
+background-color: #4d5a7c;
+width : 100%;
+}
+
+header .Contact_Us:hover { /* Passage de la souris sur la partie Contact Us (bord plus couleur, A revoir avec le graphiste) */
+background-color: #4d5a7c;
+width : 100%;
+}
+
+header .Log_Out:hover { /* Passage de la souris sur la partie Log out (bord plus couleur, A revoir avec le graphiste) */
+background-color: #4d5a7c;
+width: 100%;
+}
+
+header .My_account .submenu { /*La même chose que plus haut, changement de couleur mais pour les sous menus cette fois*/
+background-color: #4d5a7c;
+width : 100%;
+}
+
+header .About_Us .submenu { /*La même chose que plus haut, changement de couleur mais pour les sous menus cette fois*/
+background-color: #4d5a7c;
+width : 100%;
+}
+
+header .Contact_Us .submenu { /*La même chose que plus haut, changement de couleur mais pour les sous menus cette fois*/
+background-color: #4d5a7c;
+width : 100%;
+}
+
+header .submenu li:hover a { /* Passage de la souris sur les sous parties*/
+color: white;
+font-weight: bold;
+}
+
+header .submenu li:active a { /* Lors d'un clic sur une sous partie*/
+color: black;
+}
+
+
+@font-face {
+    font-family: 'manjari';
+    src: url("../anciennes_pages/Settings/polices/manjari/Manjari-Bold.ttf") format("truetype");
+    src: url("../anciennes_pages/Settings/polices/manjari/Manjari-Regular.ttf") format("truetype");
+    src: url("../anciennes_pages/Settings/polices/manjari/Manjari-Thin.ttf") format("truetype");
+/*---------------------------------------------------------------------------------------------------------------------------------------------*/
