@@ -31,15 +31,14 @@
 				<li><a href="#">Project Display</a></li>
 			</ul>
 			</li>
-			
-			<li class = "Contact_Us"><a href="#">Contact Us</a>
+			<li class = "Contact_Us"><a href="./index.php?action=contactUs">Contact Us</a>
 			<ul class="submenu">
-				<li><a href="../anciennes_pages/Contact%20Us/contactus.php">Our Contact Information</a></li>
+				<li><a href="./index.php?action=contactUs">Our Contact Information</a></li>
 				<li><a href="../anciennes_pages/Contact%20Us/message.php">Message</a></li>
 			</ul>
 			</li>
 			
-			<li class="Log_Out"><a href="../anciennes_pages/Log%20out/deconnexion.php">Log out</a></li>
+			<li class="Log_Out"><a href="./index.php?action=logOut">Log out</a></li>
 		</ul>
 	</nav>
 	</header>

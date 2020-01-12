@@ -1,23 +1,13 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<title> Contact Us</title>
+<title>Contact Us</title>
 <meta charset="utf-8"/>
-<link rel="stylesheet" href="../Contact Us/contactus.css"/>
-<link rel="stylesheet" href="../../css/Menu.css"/>
-<link rel="stylesheet" href="../../css/footer.css"/>
-
-
-
-
+<link rel="stylesheet" href="./css/contactus.css"/>
 </head>
 <body>
-
-<?php INCLUDE('../Settings/Menu.php') ?>
-
-
-<center><h2> Our Information </h2> </center>
+<?php ob_start(); ?>
+<center><h1> Our Information </h1> </center>
 <br/><br/><br/>
 
 <ul class="ourinfo">
@@ -33,10 +23,7 @@
 <center><ul>
 <li> For further questions, please go to the section : <a href="../My account/help.php" style="text-decoration:none"><input type="submit" value="Help" class="bouton"></a></li>
 </ul></center>
-
-
-<?php INCLUDE('../Settings/footer.php') ?>
-
-
+<?php $content = ob_get_clean();
+require ('templateView.php')?>
 </body>
 </html>

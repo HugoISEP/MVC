@@ -4,14 +4,14 @@ session_start();
 require_once('controller/controller.php');
 
 try {
-    if (!isset($_GET['action']) ) {
+    if (!isset($_GET['action']) && !isset($_SESSION['password'])) {
         if (isset($_POST['email']) && isset($_POST['password'])) {
             tryConnection($_POST['email'], $_POST['password']);
         } else {
             connection();
         }
     }
-    else{
+    elseif (isset($_GET['action']) && isset($_SESSION['email'])){
         if($_GET['action'] == 'generalInfo'){
             generalInfo();
         } elseif ($_GET['action'] == 'generalData'){
@@ -20,11 +20,16 @@ try {
             newTest();
         } elseif ($_GET['action'] == 'help'){
             help();
+        } elseif ($_GET['action'] == 'contactUs'){
+            contactUs();
         }
-
+        elseif ($_GET['action'] == 'logOut'){
+            logOut();
+        }
     }
-
-
+    else{
+        throw new Exception('ERROR 404');
+    }
 } catch (Exception $e) {
-
+    echo $e ->getMessage();
 }
