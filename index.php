@@ -33,7 +33,7 @@ try {
         }
         elseif ($_GET['action'] == 'newClient'){
             if (isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email']) && isset($_POST['gender']) && isset($_POST['password'])) {
-                createNewClient($_POST['first_name'], $_POST['last_name'], $_POST['email'], $['email_center'], $_POST['gender'], $_POST['password'], $_POST['phone_number'], $_POST['birth'], $_FILES['photo']);
+                createNewClient($_POST['first_name'], $_POST['last_name'], $_POST['email'], $_POST['email_center'], $_POST['gender'], $_POST['password'], $_POST['phone_number'], $_POST['birth'], $_FILES['photo']);
             } else {
                 newclient();
             }

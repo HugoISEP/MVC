@@ -51,9 +51,10 @@ function logOut(){
 }
 
 function newclient(){
+    $centerManager = new CenterManager();
+    $centersData = $centerManager->getCenters();
     require ('view/newClientView.php');
 }
 
-function createNewClient($first_name, $last_name, $email, $gender, $password, $phone_number, $birth, $photo){
-
+function createNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth, $photo){
 }
