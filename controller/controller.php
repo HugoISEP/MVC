@@ -56,5 +56,14 @@ function newclient(){
     require ('view/newClientView.php');
 }
 
+
+
 function createNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth, $photo){
+    $newClientData = addNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth, $photo);
+    if ($newClientData == false){
+        die('Impossible to add a new client');
+    }
+    else {
+        header ('Location: index.php');
+    }
 }

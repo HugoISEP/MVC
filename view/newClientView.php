@@ -12,7 +12,7 @@
         <h1>NEW CLIENT</h1>
     </header>
     <section class="informations">
-        <form method="post" action="../anciennes_pages/Log%20in/NewClient_traitement.php" onsubmit="return validate()" enctype="multipart/form-data">
+        <form method="post" action="./index.php" onsubmit="return validate()" enctype="multipart/form-data">
             <fieldset class="box">
                 <label for="first_name">First Name</label> :
                 <input type="text" name="first_name" id="first_name" placeholder="Arthur" size="40" autofocus required/>
@@ -50,7 +50,7 @@
                 <br/>
                 <label for="email_center">Center : </label>
                 <select id="email_center" name="email_center">
-                    <?php while($result = $centerData -> fetch()){?>
+                    <?php while($result = $centersData -> fetch()){?>
                         <option name="email_center">
                             <?php echo $result['email']?>
                         </option>
