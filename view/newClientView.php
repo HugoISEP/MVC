@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="NewClient.css">
+    <link rel="stylesheet" href="../anciennes_pages/Log%20in/NewClient.css">
     <title>New Client</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
         <h1>NEW CLIENT</h1>
     </header>
     <section class="informations">
-        <form method="post" action="NewClient_traitement.php" onsubmit="return validate()" enctype="multipart/form-data">
+        <form method="post" action="../anciennes_pages/Log%20in/NewClient_traitement.php" onsubmit="return validate()" enctype="multipart/form-data">
             <fieldset class="box">
                 <label for="first_name">First Name</label> :
                 <input type="text" name="first_name" id="first_name" placeholder="Arthur" size="40" autofocus required/>
@@ -21,7 +21,7 @@
                 <label for="last_name">Last Name</label> :
                 <input type="text" name="last_name" id="last_name" placeholder="Lorphelin" size="40" required/>
                 <br/>
-                <select id="gender">
+                <select id="gender" required>
                     Gender :
                     <option> Male </option>
                     <option> Female </option>

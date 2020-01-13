@@ -11,7 +11,6 @@ class UserManage
             $user->execute(array('email'=>$emailTest));
             $userData = $user->fetch();
             if ($userData['password'] == $passwordTest) {
-                $_SESSION['email'] = $emailTest;
                 return true;
             } else {
                 return false;

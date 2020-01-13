@@ -33,7 +33,7 @@
         <div class="separateur">
             <p id="or">OR</p>
         </div>
-        <a href="../anciennes_pages/Log%20in/NewClient.php" class="bouton">New Client</a>
+        <a href="./index.php?newClient" class="bouton">New Client</a>
         <br />
         <footer id="basdepage">
 
