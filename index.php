@@ -4,7 +4,7 @@ session_start();
 require_once('controller/controller.php');
 
 try {
-    if (!isset($_GET['action']) && !isset($_SESSION['password'])) {
+    if (!isset($_GET['action']) && !isset($_SESSION['email'])) {
         if (isset($_POST['email']) && isset($_POST['password'])) {
             tryConnection($_POST['email'], $_POST['password']);
         } else {
