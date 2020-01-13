@@ -48,6 +48,14 @@
                 <input type="tel" name="phone_number" id="phone_number" size="11" placeholder="06 75 92 62 21" pattern="[0-9]{10}" maxlength="10" required><label for="phone_number"></label>
                 <br/>
                 <br/>
+                <label for="email_center">Center : </label>
+                <select id="email_center" name="email_center">
+                    <?php while($result = $centerData -> fetch()){?>
+                        <option name="email_center">
+                            <?php echo $result['email']?>
+                        </option>
+                    <?php } ?>
+                </select>
                 <label for="ID_photo">ID Photo</label> :
                 <input type="file" name="photo" id="ID_photo" value="Choose ...">
                 <br/>
