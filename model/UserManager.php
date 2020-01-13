@@ -1,7 +1,7 @@
 <?php
 
 
-class UserManage
+class UserManager extends Manager
 {
     public function testUserConnection($emailTest, $passwordTest)
     {

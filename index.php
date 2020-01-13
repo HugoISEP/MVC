@@ -11,8 +11,8 @@ try {
             connection();
         }
     }
-    elseif (isset($_GET['action'])){
-        if(isset($_SESSION['email'])){
+    elseif (isset($_SESSION['email'])){
+        if(isset($_GET['action'])){
             if($_GET['action'] == 'generalInfo'){
                 generalInfo();
             } elseif ($_GET['action'] == 'generalData'){
@@ -28,8 +28,15 @@ try {
                 logOut();
             }
         }
+        elseif (!isset($_GET['action'])){
+            generalInfo();
+        }
         elseif ($_GET['action'] == 'newClient'){
-            newClient();
+            if (isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email']) && isset($_POST['gender']) && isset($_POST['password'])) {
+                createNewClient($_POST['first_name'], $_POST['last_name'], $_POST['email'], $_POST['gender'], $_POST['password'], $_POST['phone_number'], $_POST['birth'], $_FILES['photo']);
+            } else {
+                newclient();
+            }
         }
     }
     else{
