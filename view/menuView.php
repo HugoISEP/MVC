@@ -6,11 +6,11 @@
 </head>
 	<header>
 	<div class="poutre">
-		<div class="boutonMenu"><img id="BoutonMenuDeroulant" src="./image/menu.png"></div>
-		<div class="texte"><a href="./index.php?action=generalInfo">General Info</a></div>
-		<div class="texte"><a href="./index.php?action=generalData">General Data</a></div>
-		<div class="texte"><a href="./index.php?action=newTest">New Test</a></div>
-		<div class="texte"><a href="./index.php?action=help">Help</a></div>
+		<div class="boutonMenu"><img id="BoutonMenuDeroulant" src="../image/menu.png"></div>
+		<div class="texte"><a href="../index.php?action=generalInfo">General Info</a></div>
+		<div class="texte"><a href="../index.php?action=generalData">General Data</a></div>
+		<div class="texte"><a href="../index.php?action=newTest">New Test</a></div>
+		<div class="texte"><a href="../index.php?action=help">Help</a></div>
 	</div>
 	
 	
@@ -18,10 +18,10 @@
 		<ul>
 			<li class = "My_account"><a href="#">My account</a>
 			<ul class="submenu">
-				<li><a href="./index.php?action=generalInfo">General Info</a></li>
-				<li><a href="./index.php?action=generalData">General Data</a></li>
-				<li><a href="./index.php?action=newTest"">New Test</a></li>
-				<li><a href="./index.php?action=help">Help</a></li>
+				<li><a href="../index.php?action=generalInfo">General Info</a></li>
+				<li><a href="../index.php?action=generalData">General Data</a></li>
+				<li><a href="../index.php?action=newTest"">New Test</a></li>
+				<li><a href="../index.php?action=help">Help</a></li>
 			</ul>
 			</li>
 			
@@ -33,12 +33,12 @@
 			</li>
 			<li class = "Contact_Us"><a href="./index.php?action=contactUs">Contact Us</a>
 			<ul class="submenu">
-				<li><a href="./index.php?action=contactUs">Our Contact Information</a></li>
+				<li><a href="../index.php?action=contactUs">Our Contact Information</a></li>
 				<li><a href="../anciennes_pages/Contact%20Us/message.php">Message</a></li>
 			</ul>
 			</li>
 			
-			<li class="Log_Out"><a href="./index.php?action=logOut">Log out</a></li>
+			<li class="Log_Out"><a href="../index.php?action=logOut">Log out</a></li>
 		</ul>
 	</nav>
 	</header>
