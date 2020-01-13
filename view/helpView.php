@@ -7,7 +7,7 @@
 <title> Help </title>
 
 <meta charset="utf-8"/>
-<link rel="stylesheet" href="../css/help.css"/>
+<link rel="stylesheet" href="./css/help.css"/>
 
 </head>
 <body>

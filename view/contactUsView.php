@@ -3,7 +3,7 @@
 <head>
 <title>Contact Us</title>
 <meta charset="utf-8"/>
-<link rel="stylesheet" href="../css/contactUs.css"/>
+<link rel="stylesheet" href="./css/contactUs.css"/>
 </head>
 <body>
 <?php ob_start(); ?>

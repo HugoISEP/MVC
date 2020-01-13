@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-	<link rel="stylesheet" href="../css/generalData"/>
+	<link rel="stylesheet" href="./css/generalData"/>
     <title>General data</title>
 </head>
 <body>
