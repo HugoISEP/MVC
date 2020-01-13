@@ -40,11 +40,11 @@ class UserManager extends Manager
 
     }
 
-    public function addNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth, $photo){
+    public function addNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth){
         $db = $this->dbConnect();
         $newClient = $db ->prepare('INSERT INTO users(email, last_name, first_name, gender, birthday, phone_number, password, email_center) 
-                                                VALUES(:email, :last_name, :first_name, :gender, :birth, :phone_number, :password, :email_center)');
-        $newClient->execute(array($email, $last_name, $first_name, $gender, $birth, $phone_number, $password, $email_center));
-        return $newClient;
+                                                VALUES(?, ?, ?, ?, ?, ?, ?, ?)');
+        $affectedLines = $newClient->execute(array($email, $last_name, $first_name, $gender, $birth, $phone_number, $password, $email_center));
+        return $affectedLines;
     }
 }

@@ -12,7 +12,7 @@
         <h1>NEW CLIENT</h1>
     </header>
     <section class="informations">
-        <form method="post" action="./index.php" onsubmit="return validate()" enctype="multipart/form-data">
+        <form method="post" action="index.php?action=newClient" <!--onsubmit="return validate()" enctype="multipart/form-data"-->>
             <fieldset class="box">
                 <label for="first_name">First Name</label> :
                 <input type="text" name="first_name" id="first_name" placeholder="Arthur" size="40" autofocus required/>
@@ -21,11 +21,11 @@
                 <label for="last_name">Last Name</label> :
                 <input type="text" name="last_name" id="last_name" placeholder="Lorphelin" size="40" required/>
                 <br/>
-                <select id="gender" required>
+                <select id="gender" name="gender" required>
                     Gender :
-                    <option> Male </option>
-                    <option> Female </option>
-                    <option> Other </option>
+                    <option value="Male"> Male </option>
+                    <option value="Female"> Female </option>
+                    <option value="Other"> Other </option>
                 </select>
                 <br/>
                 <label for="email">Your Email</label> :
@@ -37,7 +37,7 @@
                 <br/>
                 <br/>
                 <label for="confirm_pass">Confirm Your Password</label> :
-                <input type="password" name="confirm_password" id="confirm_pass" size="40" placeholder="********" required>
+                <input type="password" name="confirm_password" id="confirm_password" size="40" placeholder="********" required>
                 <br/>
                 <br/>
                 Birthday :
@@ -51,8 +51,8 @@
                 <label for="email_center">Center : </label>
                 <select id="email_center" name="email_center">
                     <?php while($result = $centersData -> fetch()){?>
-                        <option name="email_center">
-                            <?php echo $result['email']?>
+                        <option value="<?php $result['email'] ?>">
+                            <?= $result['email'] ?>
                         </option>
                     <?php } ?>
                 </select>
@@ -78,8 +78,8 @@
 
 <script type="text/javascript">
     function validate(){
-        var a = document.getElementById('pass').value;
-        var b = document.getElementById('confirm_pass').value;
+        var a = document.getElementById('password').value;
+        var b = document.getElementById('confirm_password').value;
 
         if (a!=b){
             alert('Les mots de passes ne correspondent pas !')

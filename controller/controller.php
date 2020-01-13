@@ -58,10 +58,11 @@ function newclient(){
 
 
 
-function createNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth, $photo){
-    $newClientData = addNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth, $photo);
+function createNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth){
+    $userManager = new UserManager();
+    $newClientData = $userManager->addNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth);
     if ($newClientData == false){
-        die('Impossible to add a new client');
+        throw new Exception('Error new client');
     }
     else {
         header ('Location: index.php');
