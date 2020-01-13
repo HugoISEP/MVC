@@ -6,7 +6,7 @@
 <title>New Test</title>
 
 <meta charset="utf-8"/>
-<link rel="stylesheet" href="./css/newTest.css" />
+<link rel="stylesheet" href="../css/newTest.css" />
 </head>
 
 <body>

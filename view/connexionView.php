@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./css/connection.css"/>
-    <link rel="icon" href="./image/logo_infinitemeasure.png" />
+    <link rel="stylesheet" href="../css/connection.css"/>
+    <link rel="icon" href="../image/logo_infinitemeasure.png" />
     <title>Accueil</title>
 </head>
 <body>

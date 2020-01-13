@@ -5,8 +5,6 @@ function connection(){
     require ('view/connexionView.php');
 }
 
-
-
 function tryConnection($emailTest, $passwordTest){
     $userManager = new UserManage();
     if($userManager -> testUserConnection($emailTest, $passwordTest)){

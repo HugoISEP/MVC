@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../anciennes_pages/Log%20in/NewClient.css">
+    <link rel="stylesheet" href="../css/newClient.css">
     <title>New Client</title>
 </head>
 <body>
