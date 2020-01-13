@@ -33,7 +33,7 @@
 
 <p><center> If you didn't find a solution, please send us a message : </center></p>
 
-<p><center><a href="../index.php?action=help" style="text-decoration:none"><input type="submit" value="Message" class="bouton"/></a></center></p>
+<p><center><a href="../index.php" style="text-decoration:none"><input type="submit" value="Message" class="bouton"/></a></center></p>
 <?php $content = ob_get_clean();
 require ('templateView.php'); ?>
 </body>
