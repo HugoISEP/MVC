@@ -11,6 +11,15 @@ try {
             connection();
         }
     }
+
+    elseif ($_GET['action'] == 'newClient' && !isset($_SESSION['email'])){
+        if (isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email']) && isset($_POST['gender']) && isset($_POST['password'])) {
+            createNewClient($_POST['first_name'], $_POST['last_name'], $_POST['email'], $_POST['email_center'], $_POST['gender'], $_POST['password'], $_POST['phone_number'], $_POST['birth'], $_FILES['photo']);
+        } else {
+            newclient();
+        }
+    }
+
     elseif (isset($_SESSION['email'])){
         if(isset($_GET['action'])){
             if($_GET['action'] == 'generalInfo'){
@@ -31,14 +40,8 @@ try {
         elseif (!isset($_GET['action'])){
             header('Location: index.php?action=generalInfo');
         }
-        elseif ($_GET['action'] == 'newClient'){
-            if (isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email']) && isset($_POST['gender']) && isset($_POST['password'])) {
-                createNewClient($_POST['first_name'], $_POST['last_name'], $_POST['email'], $_POST['email_center'], $_POST['gender'], $_POST['password'], $_POST['phone_number'], $_POST['birth'], $_FILES['photo']);
-            } else {
-                newclient();
-            }
-        }
     }
+
     else{
         throw new Exception('ERROR 404');
     }
