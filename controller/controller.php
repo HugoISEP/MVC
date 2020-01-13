@@ -1,5 +1,5 @@
 <?php
-require_once ('model/UserManage.php');
+require_once ('model/UserManager.php');
 require ('model/CenterManager.php');
 
 function connection(){

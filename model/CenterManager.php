@@ -1,5 +1,5 @@
 <?php
-
+require_once("model/Manager.php");
 
 class CenterManager extends Manager
 {
