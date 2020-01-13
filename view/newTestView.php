@@ -37,7 +37,7 @@ echo 'Date : ' . $jour . '/' . $mois . '/' . $annee  . ' à ' . $heure . ':' . $
 <center><p> If you have a problem with a captor, please go to the section :</p></center>
 <br/><br/><br/>
 
-<a href="help.html" style="text-decoration:none"><center><input type="submit" value="Help" class="bouton"/></center></a>
+<a href="index.php?action=help" style="text-decoration:none"><center><input type="submit" value="Help" class="bouton"/></center></a>
 <?php $content = ob_get_clean();
 require('templateView.php'); ?>
 </body>

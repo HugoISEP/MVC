@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../anciennes_pages/Log%20in/NewClient.css">
+    <link rel="stylesheet" href="./css/newClient.css">
     <title>New Client</title>
 </head>
 <body>
@@ -28,11 +28,11 @@
                     <option> Other </option>
                 </select>
                 <br/>
-                <label for="mail">Your Mail</label> :
+                <label for="email">Your Email</label> :
                 <input type="email" name="email" id="email" placeholder="arthurlorphelin@gmail.com" size="40" required>
                 <br/>
                 <br/>
-                <label for="pass">Password</label> :
+                <label for="password">Password</label> :
                 <input type="password" name="password" id="password" size="40" placeholder="********" required>
                 <br/>
                 <br/>
@@ -41,13 +41,21 @@
                 <br/>
                 <br/>
                 Birthday :
-                <input type="date" name="age" id="day" size="2" placeholder="30" required><label for="day"></label>
+                <input type="date" name="birth" id="birth" size="2" placeholder="30" required><label for="birth"></label>
                 <br/>
                 <br/>
                 Phone Number :
                 <input type="tel" name="phone_number" id="phone_number" size="11" placeholder="06 75 92 62 21" pattern="[0-9]{10}" maxlength="10" required><label for="phone_number"></label>
                 <br/>
                 <br/>
+                <label for="email_center">Center : </label>
+                <select id="email_center" name="email_center">
+                    <?php while($result = $centerData -> fetch()){?>
+                        <option name="email_center">
+                            <?php echo $result['email']?>
+                        </option>
+                    <?php } ?>
+                </select>
                 <label for="ID_photo">ID Photo</label> :
                 <input type="file" name="photo" id="ID_photo" value="Choose ...">
                 <br/>

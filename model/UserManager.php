@@ -1,7 +1,7 @@
 <?php
+require_once("model/Manager.php");
 
-
-class UserManage
+class UserManager extends Manager
 {
     public function testUserConnection($emailTest, $passwordTest)
     {
@@ -37,12 +37,5 @@ class UserManage
                                                 WHERE email = :email');
     $userListTest->execute(array('email'=>$_SESSION['email']));
     return $userListTest;
-    }
-
-
-    private function dbConnect()
-    {
-        $db = new PDO('mysql:host=localhost;dbname=moduloheart;charset=utf8', 'root', '');
-        return $db;
     }
 }

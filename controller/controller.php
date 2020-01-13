@@ -1,14 +1,13 @@
 <?php
-require_once ('model/UserManage.php');
+require_once ('model/UserManager.php');
+require ('model/CenterManager.php');
 
 function connection(){
     require ('view/connexionView.php');
 }
 
-
-
 function tryConnection($emailTest, $passwordTest){
-    $userManager = new UserManage();
+    $userManager = new UserManager();
     if($userManager -> testUserConnection($emailTest, $passwordTest)){
         $_SESSION['email'] = $emailTest;
         $user = $userManager -> getUser();
@@ -25,7 +24,7 @@ function generalData(){
 }
 
 function generalInfo(){
-    $userManager = new UserManage();
+    $userManager = new UserManager();
     $user = $userManager -> getUser();
     $userListTests = $userManager->getUserListTests();
     require ('view/generalInfoView.php');
@@ -49,4 +48,13 @@ function logOut(){
         $_SESSION = array();
         session_destroy();
     }
+}
+
+function newclient(){
+    $centerManager = new CenterManager();
+    $centersData = $centerManager->getCenters();
+    require ('view/newClientView.php');
+}
+
+function createNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth, $photo){
 }

@@ -2,7 +2,7 @@
 <head>
 	<title>Menu déroulant</title>
 	<meta charset="utf-8"/>
-	<link rel="stylesheet" href="../css/Menu.css"/>
+	<link rel="stylesheet" href="./css/menu.css"/>
 </head>
 	<header>
 	<div class="poutre">
@@ -16,7 +16,7 @@
 	
 	<nav class="menu" id="TEST">
 		<ul>
-			<li class = "My_account"><a href="#">My account</a>
+			<li class = "My_account"><a href="./index.php?action=generalInfo">My account</a>
 			<ul class="submenu">
 				<li><a href="./index.php?action=generalInfo">General Info</a></li>
 				<li><a href="./index.php?action=generalData">General Data</a></li>
@@ -34,7 +34,7 @@
 			<li class = "Contact_Us"><a href="./index.php?action=contactUs">Contact Us</a>
 			<ul class="submenu">
 				<li><a href="./index.php?action=contactUs">Our Contact Information</a></li>
-				<li><a href="../anciennes_pages/Contact%20Us/message.php">Message</a></li>
+				<li><a href="./anciennes_pages/Contact%20Us/message.php">Message</a></li>
 			</ul>
 			</li>
 			
