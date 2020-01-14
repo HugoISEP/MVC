@@ -40,11 +40,15 @@ class UserManager extends Manager
 
     }
 
-    public function addNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth){
+    public function addNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth, $photo){
         $db = $this->dbConnect();
-        $newClient = $db ->prepare('INSERT INTO users(email, last_name, first_name, gender, birthday, phone_number, password, email_center) 
-                                                VALUES(?, ?, ?, ?, ?, ?, ?, ?)');
-        $affectedLines = $newClient->execute(array($email, $last_name, $first_name, $gender, $birth, $phone_number, $password, $email_center));
-        return $affectedLines;
+        $newClient = $db ->prepare('INSERT INTO users(email, last_name, first_name, gender, birthday, phone_number, password, email_center, link_img) 
+                                                VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)');
+        $affectedLines = $newClient->execute(array($email, $last_name, $first_name, $gender, $birth, $phone_number, $password, $email_center, $photo['name']));
+
+        if (isset($photo['tmp_name'])) {
+            $retour = copy($photo['tmp_name'], $photo['name']);
+        }
+            return $affectedLines;
     }
 }

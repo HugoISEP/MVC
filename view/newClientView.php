@@ -51,11 +51,13 @@
                 <label for="email_center">Center : </label>
                 <select id="email_center" name="email_center">
                     <?php while($result = $centersData -> fetch()){?>
-                        <option value="<?php $result['email'] ?>">
+                        <option value="<?= $result['email'] ?>">
                             <?= $result['email'] ?>
                         </option>
                     <?php } ?>
                 </select>
+                <br/>
+                <br/>
                 <label for="ID_photo">ID Photo</label> :
                 <input type="file" name="photo" id="ID_photo" value="Choose ...">
                 <br/>
@@ -81,7 +83,7 @@
         var a = document.getElementById('password').value;
         var b = document.getElementById('confirm_password').value;
 
-        if (a!=b){
+        if (a!==b){
             alert('Les mots de passes ne correspondent pas !')
             return false
     }
