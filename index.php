@@ -34,9 +34,10 @@ try {
                 help();
             } elseif ($_GET['action'] == 'contactUs'){
                 contactUs();
-            }
-            elseif ($_GET['action'] == 'logOut'){
+            } elseif ($_GET['action'] == 'logOut'){
                 logOut();
+            } elseif ($_GET['action'] == 'faq'){
+                faq();
             }
         }
         elseif (!isset($_GET['action'])){

@@ -66,5 +66,15 @@ function createNewClient($first_name, $last_name, $email, $email_center, $gender
     else {
         header ('Location: index.php');
     }
-    
+
+}
+
+function faq(){
+    $userManager = new UserManager();
+    $faq = $userManager->getfaq();
+    if($faq == true){
+        header('Location: ./view/faqView.php');
+    }
+    header('Location: ./view/404View.php');
+
 }

@@ -19,7 +19,7 @@
 <p> <center>If you face a problem, please check our FAQ and our Forum : </center></p>
 <br/><br/><br/>
 
-<p><center> <a href="#" style="text-decoration:none"><input type="submit" value="Q&A" class="bouton"/></a>
+<p><center> <a href="./index.php?action=faq" style="text-decoration:none"><input type="button" value="Q&A" class="bouton"/></a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
