@@ -12,7 +12,6 @@ function tryConnection($emailTest, $passwordTest){
         $_SESSION['email'] = $emailTest;
         $user = $userManager -> getUser();
         $userListTests = $userManager->getUserListTests();
-        //require ('view/generalInfoView.php');
         header ('Location: index.php?action=generalInfo');
     } else{
         require ('view/connexionView.php');
