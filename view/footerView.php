@@ -5,7 +5,7 @@
 
     <link rel="stylesheet" href="./css/footer.css"/>
 </head>
-
+<body class="Footer">
 <footer>
     <div id="autre">
         <a href="#">Language</a>
@@ -21,4 +21,5 @@
     </div>
 
 </footer>
+</body>
 </html>
