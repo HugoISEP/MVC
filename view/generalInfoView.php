@@ -9,7 +9,7 @@
 <body>
 <?php ob_start(); ?>
 <?php
-    $userData = $user->fetch();
+$userData = $user->fetch();
 ?>
 
 
@@ -50,16 +50,16 @@
             </ol>
 
 
-
-    <?php
-    $nb++;
-    }
-    $user->closeCursor();
-    $userListTests->closeCursor();
+            <?php
+            $nb++;
+        }
+        $user->closeCursor();
+        $userListTests->closeCursor();
         ?>
     </div>
+</div>
     <?php $content = ob_get_clean();
     require('templateView.php'); ?>
 
 </body>
-    </html>
+</html>
