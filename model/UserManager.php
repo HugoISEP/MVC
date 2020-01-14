@@ -31,10 +31,12 @@ class UserManager extends Manager
 
     public function getUserListTests(){
         $db = $this->dbConnect();
-        $userListTest= $db->prepare('SELECT measure.measure, test.type FROM users
+        $userListTest= $db->prepare('SELECT measure.measure, measure.date_and_time, captor.type FROM users
                                                 INNER JOIN measure
-                                                ON users.email = measure.email
-                                                WHERE email = :email');
+                                                ON users.email = measure.email_user
+                                                INNER JOIN captor
+                                                ON measure.id_captor = captor.id_captor
+                                                WHERE users.email = :email');
     $userListTest->execute(array('email'=>$_SESSION['email']));
     return $userListTest;
 
