@@ -39,7 +39,6 @@ class UserManager extends Manager
                                                 WHERE users.email = :email');
     $userListTest->execute(array('email'=>$_SESSION['email']));
     return $userListTest;
-
     }
 
     public function addNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth, $photo){
@@ -52,5 +51,10 @@ class UserManager extends Manager
             $retour = copy($photo['tmp_name'], $photo['name']);
         }
             return $affectedLines;
+    }
+
+    public function addAMessage($content, $type_problem){
+        $db = $this->dbConnect();
+        $newMessage = $db ->prepare('INSERT INTO message()');
     }
 }
