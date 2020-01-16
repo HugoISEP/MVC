@@ -45,6 +45,7 @@ class UserManager extends Manager
         $db = $this->dbConnect();
         $newClient = $db ->prepare('INSERT INTO users(email, last_name, first_name, gender, birthday, phone_number, password, email_center, link_img) 
                                                 VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)');
+
         $affectedLines = $newClient->execute(array($email, $last_name, $first_name, $gender, $birth, $phone_number, $password, $email_center, $photo['name']));
 
         if (isset($photo['tmp_name'])) {
