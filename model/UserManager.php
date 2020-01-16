@@ -14,7 +14,6 @@ class UserManager extends Manager
         $db = $this->dbConnect();
         try {
             $user = $db->prepare('SELECT * FROM users WHERE email = :email');
-            mysql_real_escape_string($emailTest);
             $user->execute(array('email'=>$emailTest));
             $userData = $user->fetch();
             if ($userData['password'] == $passwordTest) {
@@ -33,22 +32,20 @@ class UserManager extends Manager
     {
         $db = $this->dbConnect();
         $user = $db->prepare('SELECT * FROM users WHERE email = :email');
-        mysql_real_escape_string($_SESSION['email']);
-        $user->execute(array('email'=>$_SESSION['email']));
+        $user->execute(array('email'=>$_SESSION['email_user']));
 
         return $user;
     }
 
     public function getUserListTests(){
         $db = $this->dbConnect();
-        $userListTest= $db->prepare('SELECT measure.measure, measure.date_and_time, captor.type FROM users
+        $userListTest= $db->prepare('SELECT measure.measure_value, measure.measure_unit, measure.date_and_time, captor.type FROM users
                                                 INNER JOIN measure
                                                 ON users.email = measure.email_user
                                                 INNER JOIN captor
                                                 ON measure.id_captor = captor.id_captor
                                                 WHERE users.email = :email');
-        mysql_real_escape_string($_SESSION['email']);
-    $userListTest->execute(array('email'=>$_SESSION['email']));
+    $userListTest->execute(array('email'=>$_SESSION['email_user']));
     return $userListTest;
     }
 

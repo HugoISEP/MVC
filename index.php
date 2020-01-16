@@ -6,7 +6,7 @@ require_once('controller/controller.php');
 try {
     //Si l'utilisateur n'est pas connectée et qu'il n'y a pas d'action
     if (!isset($_GET['action']) && !isset($_SESSION['email'])) {
-        if (isset($_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) && isset($_POST['password'])) {
+        if (isset($_POST['email']) && isset($_POST['password'])) {
             tryConnection($_POST['email'], $_POST['password']);
         } else {
             connection();
@@ -22,7 +22,7 @@ try {
         }
     }
     //Si l'utilisateur est connecté
-    elseif (isset($_SESSION['email'])){
+    elseif (isset($_SESSION['email_user'])){
         if(isset($_GET['action'])){
             if($_GET['action'] == 'generalInfo'){
                 generalInfo();
