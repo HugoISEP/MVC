@@ -19,7 +19,7 @@
 
 <center><p class="typeofproblem">Type of the problem :                               
 		<select name="problem" id="problem">
-			<option value="debut" disabled="disabled">Choose...</option>
+			<option value="debut">Choose...</option>
 			<option value="temperature">Capteur de température</option>
 			<option value="frequence_cardiaque">Capteur de frequence cardiaque, here we go</option>
 			<option value="tonalite_sonore">Microphone</option>

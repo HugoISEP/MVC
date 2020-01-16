@@ -22,7 +22,7 @@ try {
         }
     }
     //Si l'utilisateur est connecté
-    elseif (isset($_SESSION['email'])){
+    elseif (isset($_SESSION['email_user'])){
         if(isset($_GET['action'])){
             if($_GET['action'] == 'generalInfo'){
                 generalInfo();
@@ -34,9 +34,10 @@ try {
                 help();
             } elseif ($_GET['action'] == 'contactUs'){
                 contactUs();
-            }
-            elseif ($_GET['action'] == 'logOut'){
+            } elseif ($_GET['action'] == 'logOut'){
                 logOut();
+            } elseif ($_GET['action'] == 'faq'){
+                faq();
             }
         }
         elseif (!isset($_GET['action'])){

@@ -9,7 +9,6 @@ function connection(){
 function tryConnection($emailTest, $passwordTest){
     $userManager = new UserManager();
     if($userManager -> testUserConnection($emailTest, $passwordTest)){
-        $_SESSION['email'] = $emailTest;
         $user = $userManager -> getUser();
         $userListTests = $userManager->getUserListTests();
         header ('Location: index.php?action=generalInfo');
@@ -59,6 +58,7 @@ function newclient(){
 
 function createNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth, $photo){
     $userManager = new UserManager();
+
     $newClientData = $userManager->addNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth, $photo);
     if ($newClientData == false){
         throw new Exception('Error new client');
@@ -66,5 +66,15 @@ function createNewClient($first_name, $last_name, $email, $email_center, $gender
     else {
         header ('Location: index.php');
     }
-    
+
+}
+
+function faq(){
+    $userManager = new UserManager();
+    $faq = $userManager->getfaq();
+    if($faq == true){
+        header('Location: ./view/faqView.php');
+    }
+    header('Location: ./view/404View.php');
+
 }

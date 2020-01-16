@@ -7,10 +7,10 @@
 	<header>
 	<div class="poutre">
 		<div class="boutonMenu"><img id="BoutonMenuDeroulant" src="./image/menu.png"></div>
-		<div class="texte"><a href="./index.php?action=generalInfo">General Info</a></div>
-		<div class="texte"><a href="./index.php?action=generalData">General Data</a></div>
-		<div class="texte"><a href="./index.php?action=newTest">New Test</a></div>
-		<div class="texte"><a href="./index.php?action=help">Help</a></div>
+        <a href="./index.php?action=generalInfo"  class="texte"><div><h1>General Info</h1></div></a>
+		<a href="./index.php?action=generalData"  class="texte"><div><h1>General Data</h1></div></a>
+        <a href="./index.php?action=newTest"  class="texte"><div><h1>New Test</h1></div></a>
+        <a href="./index.php?action=help" class="texte"><div><h1>Help</h1></div></a>
 	</div>
 	
 	
