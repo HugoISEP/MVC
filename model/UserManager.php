@@ -17,7 +17,7 @@ class UserManager extends Manager
             $user->execute(array('email'=>$emailTest));
             $userData = $user->fetch();
             if ($userData['password'] == $passwordTest) {
-                $_SESSION['email'] = $userData['email'];
+                $_SESSION['email_user'] = $userData['email'];
                 $_SESSION['email_center'] = $userData['email_center'];
                 return true;
             } else {
@@ -77,8 +77,8 @@ class UserManager extends Manager
         $db = $this->dbConnect();
         $newMessage = $db ->prepare('INSERT INTO message(id_message, email_center, email_user, message_content, type_problem, date_and_time
                                                 VALUES(:email_center, :email_user, :message, :message_content, :type_problem, :date_and_time))');
-        $affectedLines = $newMessage -> execute(array('email_center'=>$id_message['email'],
-                                                        'email_center'=>$id_message['email'],
+        $affectedLines = $newMessage -> execute(array('email_center'=>$_SESSION['email_center'],
+                                                        'email_user'=>$id_message['email'],
                                                         'email_center'=>$id_message['email'],
                                                         'email_center'=>$id_message['email'],
                                                         'email_user'=>$_SESSION['email']));
