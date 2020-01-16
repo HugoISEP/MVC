@@ -25,7 +25,7 @@ header .poutre {
 header .texte {
 	flex : 1;
 	min-width: 180px;
-	padding-top : 8px;
+	padding-top : 0px;
 	border-left: 1px solid black; /*Separation des différentes rubriques*/
 	border-right: 1px solid black;
 	text-decoration: none;
@@ -62,7 +62,7 @@ header .boutonMenu {
 
 header h1{
 	color : black;
-	font-size: 17px;
+	font-size: 20px;
 }
 
 header .texte:active h1{ /*Lors du clic sur le bouton si on veut mettre une petite animation*/
