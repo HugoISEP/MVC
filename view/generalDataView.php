@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-	<link rel="stylesheet" href="./css/generalData"/>
+	<link rel="stylesheet" href="./css/generalData.css"/>
     <title>General data</title>
 </head>
 <body>
@@ -24,8 +24,8 @@
             </p>
             </form>
         </div>
-        <div id="image_graphique">
-            <img src="./image/exemple_graphique_baton.PNG" alt="graphique en batons" />
+        <div>
+
         </div>
     </div>
 <?php $content = ob_get_clean();
