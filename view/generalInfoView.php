@@ -60,6 +60,6 @@ $userData = $user->fetch();
 </div>
     <?php $content = ob_get_clean();
     require('templateView.php'); ?>
-
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 </body>
 </html>
