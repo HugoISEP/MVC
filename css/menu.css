@@ -6,7 +6,7 @@ body{
 }
 
 header{
-	position: absolute; 
+	position: absolute;
 	top: 0; 
 	left: 0; 
 	right: 0 ;
@@ -16,7 +16,7 @@ header{
 
 header .poutre {
 	text-align : center;
-	display:flex; /*Afficher les rubriques en ligne*/
+	display : flex; /*Afficher les rubriques en ligne*/
 	flex-wrap: nowrap; /*Pas de retour a la ligne lors de la baisse de la taille de la page, voir si cela marche avec les pourcentages*/
 	text-decoration: none;
 	height:40px;
@@ -28,10 +28,11 @@ header .texte {
 	padding-top : 8px;
 	border-left: 1px solid black; /*Separation des différentes rubriques*/
 	border-right: 1px solid black;
+	text-decoration: none;
 	/* border-bottom : 2px solid black; */
 }
 
-header .texte:hover a{
+header .texte:hover h1{
 	color: white;
 	font-weight: bold;
 }
@@ -59,12 +60,12 @@ header .boutonMenu {
 	border-right: 1px solid black;
 }
 
-header a{
-	text-decoration: none;
+header h1{
 	color : black;
+	font-size: 17px;
 }
 
-header .texte:active a{ /*Lors du clic sur le bouton si on veut mettre une petite animation*/
+header .texte:active h1{ /*Lors du clic sur le bouton si on veut mettre une petite animation*/
 }
 
 /*changement de couleur du texte un peu et background(opacité),
@@ -188,9 +189,10 @@ color: black;
 }
 
 
-@font-face {
-    font-family: 'manjari';
-    src: url("../anciennes_pages/Settings/polices/manjari/Manjari-Bold.ttf") format("truetype");
-    src: url("../anciennes_pages/Settings/polices/manjari/Manjari-Regular.ttf") format("truetype");
-    src: url("../anciennes_pages/Settings/polices/manjari/Manjari-Thin.ttf") format("truetype");
-/*---------------------------------------------------------------------------------------------------------------------------------------------*/
+/*@font-face {*/
+/*	font-family: 'manjari';*/
+/*	src: url("../anciennes_pages/Settings/polices/manjari/Manjari-Bold.ttf") format("truetype");*/
+/*	src: url("../anciennes_pages/Settings/polices/manjari/Manjari-Regular.ttf") format("truetype");*/
+/*	src: url("../anciennes_pages/Settings/polices/manjari/Manjari-Thin.ttf") format("truetype");*/
+/*	!*---------------------------------------------------------------------------------------------------------------------------------------------*!*/
+/*}*/
