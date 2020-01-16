@@ -5,7 +5,7 @@ class Manager
 {
     protected function dbConnect()
     {
-        $db = new PDO('mysql:host=localhost;dbname=moduloheart;charset=utf8', 'root', '');
+        $db = new PDO('mysql:host=localhost;dbname=moduloheart;charset=utf8', 'root', 'root');
         return $db;
     }
 }

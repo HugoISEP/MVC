@@ -43,12 +43,12 @@ $userData = $user->fetch();
                     <ul>
                         <li><strong>Test n° <?= $nb ?></strong></li>
                         <li>captor type : <?= $userListTestsData['type'] ?></li>
-                        <li>result : <?= $userListTestsData['measure'] ?></li>
+                        <li>result : <?= $userListTestsData['measure_value'] ?> <?=$userListTestsData['measure_unit']?></li>
                         <li>date : <?= $userListTestsData['date_and_time'] ?></li>
                     </ul>
                 </li>
             </ol>
-
+        </div>
 
             <?php
             $nb++;
