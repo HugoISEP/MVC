@@ -13,10 +13,12 @@ class UserManager extends Manager
 
         $db = $this->dbConnect();
         try {
-            $user = $db->prepare('SELECT password FROM users WHERE email = :email');
+            $user = $db->prepare('SELECT * FROM users WHERE email = :email');
             $user->execute(array('email'=>$emailTest));
             $userData = $user->fetch();
             if ($userData['password'] == $passwordTest) {
+                $_SESSION['email'] = $userData['email'];
+                $_SESSION['email_center'] = $userData['email_center'];
                 return true;
             } else {
                 return false;
@@ -71,8 +73,14 @@ class UserManager extends Manager
             return $affectedLines;
     }
 
-    public function addAMessage($content, $type_problem){
+    public function addAMessage($id_message, $message_content, $type_problem, $date_and_time){
         $db = $this->dbConnect();
-        $newMessage = $db ->prepare('INSERT INTO message()');
+        $newMessage = $db ->prepare('INSERT INTO message(id_message, email_center, email_user, message_content, type_problem, date_and_time
+                                                VALUES(:email_center, :email_user, :message, :message_content, :type_problem, :date_and_time))');
+        $affectedLines = $newMessage -> execute(array('email_center'=>$id_message['email'],
+                                                        'email_center'=>$id_message['email'],
+                                                        'email_center'=>$id_message['email'],
+                                                        'email_center'=>$id_message['email'],
+                                                        'email_user'=>$_SESSION['email']));
     }
 }

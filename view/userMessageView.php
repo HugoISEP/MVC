@@ -12,22 +12,18 @@
 <body>
 <?php ob_start(); ?>
 <center><p class="titre"> Send us a message </p></center>
-
+<center><form method="post" action="../anciennes_pages/Contact%20Us/messagetraitement.php">
 <center><p class="typeofproblem">Type of the problem :                               
-		<select name="problem" id="problem">
+		<select name="problem" id="typeProblem">
 			<option value="debut" disabled="disabled">Choose...</option>
 			<option value="temperature">Temperature Sensor</option>
 			<option value="frequence_cardiaque">Heart Rate Sensor</option>
 			<option value="tonalite_sonore">Microphone</option>
-            <option valut="other">Other</option>
+            <option value="other">Other</option>
 		</select>
 	</p></center>
 <br/><br/><br/>
-
-<center><form method="post" action="../anciennes_pages/Contact%20Us/messagetraitement.php">
 <p>
-<label for="email" class="typeofproblem"> Votre adresse mail :</label>
-		<input type="email" name="email" id="email"/>
 <br/><br/><br/><br/><br/>
 <label for="comments"class="typeofproblem">Comments about your problem :</label><br/><br/>
 <textarea name="comments" id="comments" class="typeofproblem" rows="5" cols="150"></textarea>

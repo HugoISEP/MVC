@@ -9,7 +9,6 @@ function connection(){
 function tryConnection($emailTest, $passwordTest){
     $userManager = new UserManager();
     if($userManager -> testUserConnection($emailTest, $passwordTest)){
-        $_SESSION['email'] = $emailTest;
         $user = $userManager -> getUser();
         $userListTests = $userManager->getUserListTests();
         header ('Location: index.php?action=generalInfo');
