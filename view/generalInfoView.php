@@ -57,9 +57,10 @@ $userData = $user->fetch();
         $userListTests->closeCursor();
         ?>
     </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 </div>
     <?php $content = ob_get_clean();
     require('templateView.php'); ?>
-<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
 </body>
 </html>

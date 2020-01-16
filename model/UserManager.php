@@ -14,6 +14,7 @@ class UserManager extends Manager
         $db = $this->dbConnect();
         try {
             $user = $db->prepare('SELECT * FROM users WHERE email = :email');
+            mysql_real_escape_string($emailTest);
             $user->execute(array('email'=>$emailTest));
             $userData = $user->fetch();
             if ($userData['password'] == $passwordTest) {
@@ -32,6 +33,7 @@ class UserManager extends Manager
     {
         $db = $this->dbConnect();
         $user = $db->prepare('SELECT * FROM users WHERE email = :email');
+        mysql_real_escape_string($_SESSION['email']);
         $user->execute(array('email'=>$_SESSION['email']));
 
         return $user;
@@ -45,6 +47,7 @@ class UserManager extends Manager
                                                 INNER JOIN captor
                                                 ON measure.id_captor = captor.id_captor
                                                 WHERE users.email = :email');
+        mysql_real_escape_string($_SESSION['email']);
     $userListTest->execute(array('email'=>$_SESSION['email']));
     return $userListTest;
     }

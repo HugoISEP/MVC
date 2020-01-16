@@ -10,6 +10,7 @@ footer {
     position: absolute;
     color: white;
     display: flex;
+    bottom : 0;
     width : 100%;
     flex-direction: row;
     margin-top : 50px;
