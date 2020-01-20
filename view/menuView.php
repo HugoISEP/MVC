@@ -34,7 +34,7 @@
 			<li class = "Contact_Us"><a href="./index.php?action=contactUs">Contact Us</a>
 			<ul class="submenu">
 				<li><a href="./index.php?action=contactUs">Our Contact Information</a></li>
-				<li><a href="./anciennes_pages/Contact%20Us/message.php">Message</a></li>
+				<li><a href="./index.php?action=help&amp;action2=message">Message</a></li>
 			</ul>
 			</li>
 			

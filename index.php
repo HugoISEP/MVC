@@ -31,7 +31,25 @@ try {
             } elseif ($_GET['action'] == 'newTest'){
                 newTest();
             } elseif ($_GET['action'] == 'help'){
-                help();
+                if(isset($_GET['action2']) && $_GET['action2'] == 'message'){
+                    if(isset($_POST['typeOfProblem']) && isset($_POST['problemExplenation'])){
+                        writeAMessage($_POST['problemExplenation'], $_POST['typeOfProblem']);
+                    }
+                    else{
+                        message();
+                    }
+                } elseif(isset($_GET['action2']) && $_GET['action2'] == 'forum'){
+                    if(isset($_POST['messageForum'])){
+
+                    } else {
+                        forum();
+                    }
+                } elseif(isset($_GET['action2']) && $_GET['action2'] == 'faq'){
+                    faq();
+                }
+                else{
+                    help();
+                }
             } elseif ($_GET['action'] == 'contactUs'){
                 contactUs();
             } elseif ($_GET['action'] == 'logOut'){

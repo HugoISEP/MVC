@@ -71,10 +71,40 @@ function createNewClient($first_name, $last_name, $email, $email_center, $gender
 
 function faq(){
     $userManager = new UserManager();
-    $faq = $userManager->getfaq();
-    if($faq == true){
-        header('Location: ./view/faqView.php');
-    }
-    header('Location: ./view/404View.php');
+    $faqData = $userManager->getfaq();
+    require ('view/faqView.php');
+}
 
+function message(){
+    $userManager = new UserManager();
+    $listMessages = $userManager->getMessages();
+    require ('view/userMessageView.php');
+}
+
+function writeAMessage($message_content, $type_problem){
+    $userManager = new UserManager();
+    $newMessageData = $userManager->addAMessage($message_content, $type_problem);
+    if ($newMessageData == false){
+        throw new Exception('Error write a message');
+    }
+    else {
+        header('Location: index.php?action=help?action2=message');
+    }
+}
+
+function writeAMessageInForum($text){
+    $userManager = new UserManager();
+    $newMessageInForum = $userManager->addAMessageInForum($text);
+    if ($newMessageInForum == false){
+        throw new Exception('Error write a message in forum');
+    }
+    else {
+        header('Location: index.php?action=help?action2=forum');
+    }
+}
+
+function forum(){
+    $userManager = new UserManager();
+    $listMessagesForum = $userManager->getMessagesForum();
+    require ('view/forumView.php');
 }

@@ -3,6 +3,7 @@ require_once("model/Manager.php");
 
 class UserManager extends Manager
 {
+    
     public function testUserConnection($emailTest, $passwordTest)
     {
         define("SUFFIXE","18fa73e0");
@@ -10,7 +11,6 @@ class UserManager extends Manager
         $emailTest = htmlspecialchars($emailTest);
         $passwordTest = htmlspecialchars($passwordTest);
         $passwordTest = SUFFIXE.hash("sha256",$passwordTest).PREFIXE;
-
         $db = $this->dbConnect();
         try {
             $user = $db->prepare('SELECT * FROM users WHERE email = :email');
@@ -73,14 +73,47 @@ class UserManager extends Manager
             return $affectedLines;
     }
 
-    public function addAMessage($id_message, $message_content, $type_problem, $date_and_time){
+    public function getfaq(){
         $db = $this->dbConnect();
-        $newMessage = $db ->prepare('INSERT INTO message(id_message, email_center, email_user, message_content, type_problem, date_and_time
-                                                VALUES(:email_center, :email_user, :message, :message_content, :type_problem, :date_and_time))');
-        $affectedLines = $newMessage -> execute(array('email_center'=>$_SESSION['email_center'],
-                                                        'email_user'=>$id_message['email'],
-                                                        'email_center'=>$id_message['email'],
-                                                        'email_center'=>$id_message['email'],
-                                                        'email_user'=>$_SESSION['email']));
+        $faq = $db->prepare('SELECT * FROM faq WHERE email_center = ? ORDER BY id_faq ASC');
+        $faq->execute(array($_SESSION['email_center']));
+        return $faq;
+    }
+
+    public function getMessages(){
+        $db = $this->dbConnect();
+        $userListTest= $db->prepare('SELECT * FROM message
+                                                WHERE email_user = ?
+                                                ORDER BY date_and_time ASC');
+        $userListTest->execute(array($_SESSION['email_user']));
+        return $userListTest;
+    }
+
+    public function addAMessage($message_content, $type_problem){
+        $db = $this->dbConnect();
+        $newMessage = $db ->prepare('INSERT INTO message(email_center, email_user, message_content, autor, type_problem, date_and_time)
+                                                VALUES(?, ?, ?, ?, ?, NOW())');
+        $affectedLines = $newMessage -> execute(array($_SESSION['email_center'], $_SESSION['email_user'], $message_content, $_SESSION['email_user'], $type_problem));
+        return $affectedLines;
+    }
+
+    public function addAMessageInForum($text){
+        $db = $this->dbConnect();
+        $newMessageForum = $db ->prepare('INSERT INTO message_forum(text, email_user, email_center, date_and_time, id_forum)
+                                                VALUES(?, ?, ?, NOW(), ?)');
+        $affectedLines = $newMessageForum -> execute(array($text, $_SESSION['email_user'], $_SESSION['email_center'], 1));
+        return $affectedLines;
+    }
+
+    public function getMessagesForum(){
+        $db = $this->dbConnect();
+        $messagesForum= $db->prepare('SELECT message_forum.text,  message_forum.date_and_time, users.first_name
+                                                FROM message_forum
+                                                INNER JOIN users
+                                                ON message_forum.email_user = users.email
+                                                WHERE message_forum.id_forum = ?
+                                                ORDER BY date_and_time ASC');
+        $messagesForum->execute(array(1));
+        return $messagesForum;
     }
 }
