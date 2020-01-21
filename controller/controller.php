@@ -88,7 +88,7 @@ function writeAMessage($message_content, $type_problem){
         throw new Exception('Error write a message');
     }
     else {
-        header('Location: index.php?action=help?action2=message');
+        header('Location: index.php?action=help&action2=message');
     }
 }
 
@@ -99,7 +99,7 @@ function writeAMessageInForum($text){
         throw new Exception('Error write a message in forum');
     }
     else {
-        header('Location: index.php?action=help?action2=forum');
+        header('Location: index.php?action=help&action2=forum');
     }
 }
 
