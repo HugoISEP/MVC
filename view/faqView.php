@@ -5,6 +5,7 @@
 
 <title>Message</title>
 <meta charset="utf-8"/>
+    <link rel="stylesheet" href="./css/faq.css"/>
 </head>
 <body>
 <?php ob_start(); ?>
@@ -15,10 +16,10 @@
 $id = 0;
 
 while ($results = $faqData->fetch()) {
-    echo "<section class='faq-section'>
+    echo "<section class='faqClass'>
         <input type='checkbox' id=" . $id . ">
         <label for=" . $id . ">" . $results['question'] . "</label>
-        <p id='rep'>" . $results['answer'] . "</p>
+        <p class='answer_faq'>" . $results['answer'] . "</p>
         </section>";
     $id++;
 }

@@ -75,7 +75,7 @@ class UserManager extends Manager
 
     public function getfaq(){
         $db = $this->dbConnect();
-        $faq = $db->prepare('SELECT * FROM faq WHERE email_center = ? ORDER BY id_faq ASC');
+        $faq = $db->prepare('SELECT * FROM faq ORDER BY id_faq ASC');
         $faq->execute(array($_SESSION['email_center']));
         return $faq;
     }

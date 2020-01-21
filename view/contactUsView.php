@@ -21,7 +21,7 @@
 <hr width="50%" color="black"> 
 <br/><br/><br/>
 <center><ul>
-<li> For further questions, please go to the section : <a href="../My account/help.php" style="text-decoration:none"><input type="submit" value="Help" class="bouton"></a></li>
+<li> For further questions, please go to the section : <a href="./index.php?action=help&amp" style="text-decoration:none"><input type="submit" value="Help" class="bouton"></a></li>
 </ul></center>
 <?php $content = ob_get_clean();
 require ('templateView.php')?>

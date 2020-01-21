@@ -1,81 +1,54 @@
-/*Ecart entre deux questions*/
-.faq-section{
-        margin: 1.4% 0px;
-}
-
 .titre
 {
-    font-size:350%;
+        font-size:350%;
 }
 
-.faq-section input, /*Masque les checkbox*/
-.faq-section p{
-        display: none;
-
-}/*Masque les réponses qui sont sous forme de paragraphe*/
-
-#rep{
+.answer_faq{/* Decale les réponses par rapport aux questions */
         margin-left: 20%;
         max-width: 60%;
 
 }
 
-
-.faq-section input[type=checkbox]:checked~p{/*Si la box est cochée*/
-        display: block;
-        margin-left:0.5%;
+/*Ecart entre deux questions*/
+.faqClass{
+        margin: 1.4% 0px;
 }
 
-
-.faq-section label{
-        background: #eee;
-        display: block;
-        position: relative;
-        padding:0.5%;
-        font-weight: bold;/*En gras*/
-        border: 1px solid #888;
-		margin-left : 15%;
+.faqClass label{ /* style de la question */
+        font-weight: bold;
         margin-right : 15%;
+        border: 1px solid black;
+        display: block;
+        padding:0.5%;
+        background:white;
+        margin-left : 15%;
+
 
 }
 
-/* La question ne peut pas etre selectionner avec un double clic*/
-.faq-section label::selection{
-        background: none;
-}
 
-.faq-section label:hover{
-        background: #f5f5f5;
+.faqClass input,.faqClass p{
+        display: none;/*Masque les réponses et les checkbox*/
 
 }
 
-/* Style du label si le checkbox est coché */
-.faq-section input[type=checkbox]:checked~label{
+
+.faqClass input[type=checkbox]:checked~p{
+        display: block;
+}
+
+/* Fathi bouton */
+.faqClass input[type=checkbox]:checked~label{
         border-color: #fff;
         background: #aaaaaa;
         background-color: #5899F9;
         color:#fff;
-
 }
 
-/* Flèche du label par défaut */
-.faq-section label::before{
-        content: '';
-        position: relative;
-        right: 0.1%;
-        top: 50%;
-        margin-top: -0.3%;
-        border: 6px solid transparent;
-        border-left-color: inherit;
-
+.faqClass label::selection{
+        background: none;/* Question pas selectionnable */
 }
 
 
-.faq-section input[type=checkbox]:checked~label::before{
-        border: 6px solid transparent;
-        border-top-color: inherit;
-        margin-top: -0.1%;
-        right: 0.3%;
 
-}
 
