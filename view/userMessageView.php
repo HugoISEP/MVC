@@ -5,7 +5,7 @@
 
 <title>Message</title>
 <meta charset="utf-8"/>
-<link rel="stylesheet" href="./userMessage.css"/>
+<link rel="stylesheet" href="./css/userMessage.css"/>
 
 </head>
 
@@ -18,14 +18,14 @@
 		<select name="typeOfProblem" id="typeOfProblem" required>
 			<option value="debut" selected disabled>Choose...</option>
 			<option value="temperature">Temperature sensor</option>
-			<option value="heartbeats sensor">Heartbeats sensors</option>
+			<option value="heartbeats sensor">Heartbeat sensor</option>
 			<option value="Microphone">Microphone</option>
 		</select>
 	</p></center>
-<br/><br/><br/>
+<br/>
 <p>
 <label for="problemExplenation"class="typeofproblem">Comments about your problem :</label><br/><br/>
-<textarea name="problemExplenation" id="problemExplenation" class="typeofproblem" rows="5" cols="75"></textarea>
+<textarea name="problemExplenation" id="problemExplenation" class="typeofproblem" rows="10" cols="75"></textarea>
     <input type="submit" value="Send" class="bouton"/>
 </p>
 </form></center>
@@ -33,7 +33,7 @@
 
 <?php
 while ($messages = $listMessages->fetch()){
-if($messages['autor'] == $_SESSION['email_user']){
+if($messages['email_user'] == $_SESSION['email_user']){
             echo '<p>you :';
         } else{
             echo 'center :';

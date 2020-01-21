@@ -91,7 +91,7 @@ class UserManager extends Manager
 
     public function addAMessage($message_content, $type_problem){
         $db = $this->dbConnect();
-        $newMessage = $db ->prepare('INSERT INTO message(email_center, email_user, message_content, autor, type_problem, date_and_time)
+        $newMessage = $db ->prepare('INSERT INTO message(email_center, email_user, message_content, type_problem, date_and_time)
                                                 VALUES(?, ?, ?, ?, ?, NOW())');
         $affectedLines = $newMessage -> execute(array($_SESSION['email_center'], $_SESSION['email_user'], $message_content, $_SESSION['email_user'], $type_problem));
         return $affectedLines;
