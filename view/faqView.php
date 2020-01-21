@@ -11,7 +11,7 @@
 <center><p class="titre"> Q    &    A </p></center>
 <br/><br/><br/>
 <?php
-
+ echo "bonjour";
 $id = 0;
 
 while ($results = $faqData->fetch()) {
