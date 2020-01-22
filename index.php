@@ -63,13 +63,15 @@ try {
                     userManual();
                 } elseif ($_GET['action'] == 'projectDisplay') {
                     projectDisplay();
+                } elseif ($_GET['action'] == 'editYourProfilView'){
+                    editYourProfil();
                 } else {
-                    throw new Exception('page not found');
+                    throw new Exception('Page not found');
                 }
             } elseif (!isset($_GET['action'])) {
                 header('Location: index.php?action=generalInfo');
             } else {
-                throw new Exception('page not found');
+                throw new Exception('Page not found');
             }
         } elseif($_SESSION['userType'] == 'center'){
         if ($_GET['action'] == 'logOut') {
