@@ -29,18 +29,18 @@
     <input type="submit" value="Send" class="bouton"/>
 </p>
 </form></center>
-<br/><br/>
-
+<div class="message">
 <?php
 while ($messages = $listMessages->fetch()){
 if($messages['email_user'] == $_SESSION['email_user']){
-            echo '<p>you :';
+            echo '<p>You :';
         } else{
             echo 'center :';
         }
         echo $messages['message_content'] . ' ' . $messages['date_and_time'] .'<p>';
 }
 ?>
+</div>
 <?php $content = ob_get_clean();
 require ('templateView.php')?>
 </body>

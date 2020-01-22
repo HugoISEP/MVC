@@ -3,6 +3,11 @@
 	font-size: 350%;
 }
 
+.message{
+    max-height: 270px;
+    max-width: 100%;
+    overflow: auto;
+}
 
 .decalagemessage
 {
