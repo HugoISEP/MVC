@@ -1,14 +1,16 @@
 <?php
 require_once ('model/UserManager.php');
-require ('model/CenterManager.php');
+require_once ('model/CenterManager.php');
+require_once ('model/ConnectionManager.php');
 
 function connection(){
     require ('view/connexionView.php');
 }
 
 function tryConnection($emailTest, $passwordTest){
+    $connectionManager = new ConnectionManager();
     $userManager = new UserManager();
-    if($userManager -> testUserConnection($emailTest, $passwordTest)){
+    if($connectionManager -> testUserConnection($emailTest, $passwordTest)){
         $user = $userManager -> getUser();
         $userListTests = $userManager->getUserListTests();
         header ('Location: index.php?action=generalInfo');
@@ -57,9 +59,9 @@ function newclient(){
 
 
 function createNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth, $photo){
-    $userManager = new UserManager();
+    $connectionManager = new ConnectionManager();
 
-    $newClientData = $userManager->addNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth, $photo);
+    $newClientData = $connectionManager->addNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth, $photo);
     if ($newClientData == false){
         require ('view/404View.php');
         throw new Exception('ERROR 404');
