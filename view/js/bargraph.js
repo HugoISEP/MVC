@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $.ajax({
-    url: "./data.php",
+    url: "http://localhost/MVC/view/data.php",
     method: "GET",
     fonctionGraph: function(data) {
       console.log(data);
@@ -12,7 +12,7 @@ $(document).ready(function(){
         score.push(data[i].measure_value);
       }
 
-      var chartdata = {
+      var contenuGraph = {
         labels: date,
         datasets : [
           {
@@ -29,7 +29,7 @@ $(document).ready(function(){
 
       var barGraph = new Chart(ctx, {
         type: 'bar',
-        data: chartdata
+        data: contenuGraph
       });
     },
     error: function(data) {
