@@ -5,9 +5,9 @@
     <title><?= $title ?></title>
 </head>
 <body>
-<?php require ('menuView.php'); ?>
+<?php require('menuView.php'); ?>
 <?= $content ?>
-<?php require ('footerView.php') ?>
+<?php require('footerView.php') ?>
 </body>
 </html>
 

@@ -4,7 +4,7 @@ require_once ('model/CenterManager.php');
 require_once ('model/ConnectionManager.php');
 
 function connection(){
-    require ('view/connexionView.php');
+    require('view/userView/connexionView.php');
 }
 
 function tryConnection($emailTest, $passwordTest){
@@ -15,31 +15,31 @@ function tryConnection($emailTest, $passwordTest){
         $userListTests = $userManager->getUserListTests();
         header ('Location: index.php?action=generalInfo');
     } else{
-        require ('view/connexionView.php');
+        require('view/userView/connexionView.php');
     }
 }
 
 function generalData(){
-    require ('view/generalDataView.php');
+    require('view/userView/generalDataView.php');
 }
 
 function generalInfo(){
     $userManager = new UserManager();
     $user = $userManager -> getUser();
     $userListTests = $userManager->getUserListTests();
-    require ('view/generalInfoView.php');
+    require('view/userView/generalInfoView.php');
 }
 
 function newTest(){
-    require ('view/newTestView.php');
+    require('view/userView/newTestView.php');
 }
 
 function help(){
-    require ('view/helpView.php');
+    require('view/userView/helpView.php');
 }
 
 function contactUs(){
-    require ('view/contactUsView.php');
+    require('view/userView/contactUsView.php');
 }
 
 function logOut(){
@@ -53,7 +53,7 @@ function logOut(){
 function newclient(){
     $centerManager = new CenterManager();
     $centersData = $centerManager->getCenters();
-    require ('view/newClientView.php');
+    require('view/userView/newClientView.php');
 }
 
 
@@ -63,7 +63,7 @@ function createNewClient($first_name, $last_name, $email, $email_center, $gender
 
     $newClientData = $connectionManager->addNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth, $photo);
     if ($newClientData == false){
-        require ('view/404View.php');
+        require('view/userView/404View.php');
         throw new Exception('ERROR 404');
 
     }
@@ -76,20 +76,20 @@ function createNewClient($first_name, $last_name, $email, $email_center, $gender
 function faq(){
     $userManager = new UserManager();
     $faqData = $userManager->getfaq();
-    require ('view/faqView.php');
+    require('view/userView/faqView.php');
 }
 
 function message(){
     $userManager = new UserManager();
     $listMessages = $userManager->getMessages();
-    require ('view/userMessageView.php');
+    require('view/userView/userMessageView.php');
 }
 
 function writeAMessage($message_content, $type_problem){
     $userManager = new UserManager();
     $newMessageData = $userManager->addAMessage($message_content, $type_problem);
     if ($newMessageData == false){
-        require ('view/404View.php');
+        require('view/userView/404View.php');
         throw new Exception('ERROR 404');
 
     }
@@ -102,7 +102,7 @@ function writeAMessageInForum($text){
     $userManager = new UserManager();
     $newMessageInForum = $userManager->addAMessageInForum($text);
     if ($newMessageInForum == false){
-        require ('view/404View.php');
+        require('view/userView/404View.php');
         throw new Exception('ERROR 404');
 
     }
@@ -114,17 +114,17 @@ function writeAMessageInForum($text){
 function forum(){
     $userManager = new UserManager();
     $listMessagesForum = $userManager->getMessagesForum();
-    require ('view/forumView.php');
+    require('view/userView/forumView.php');
 }
 
 function userManual(){
-    require ('view/usermanualView.php');
+    require('view/userView/usermanualView.php');
 }
 
 function projectDisplay(){
-    require ('view/projectdisplayView.php');
+    require('view/userView/projectdisplayView.php');
 }
 
 function editYourProfil(){
-    require ('view/editYourProfilView.php');
+    require('view/userView/editYourProfilView.php');
 }

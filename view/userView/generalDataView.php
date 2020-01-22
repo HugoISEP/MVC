@@ -30,7 +30,7 @@
 <script type="text/javascript" src="js/Chart.min.js"></script>
 <script type="text/javascript" src="js/bargraph.js"></script>
 <?php $content = ob_get_clean();
-require ('templateView.php')?>
+require('templateView.php') ?>
 
 </body>
 </html>

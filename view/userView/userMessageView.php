@@ -42,7 +42,7 @@ if($messages['email_user'] == $_SESSION['email_user']){
 ?>
 </div>
 <?php $content = ob_get_clean();
-require ('templateView.php')?>
+require('templateView.php') ?>
 </body>
 
 </html>
