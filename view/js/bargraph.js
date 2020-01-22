@@ -2,7 +2,7 @@ $(document).ready(function(){
   $.ajax({
     url: "./data.php",
     method: "GET",
-    success: function(data) {
+    fonctionGraph: function(data) {
       console.log(data);
       var date = [];
       var score = [];
@@ -19,14 +19,13 @@ $(document).ready(function(){
             label: 'User Score',
             backgroundColor: 'rgba(41, 119, 196, 0.75)',
             borderColor: 'rgba(41, 119, 196, 0.75)',
-            hoverBackgroundColor: 'rgba(41, 119, 196, 1)',
             hoverBorderColor: 'rgba(41, 119, 196, 1)',
             data: score
           }
         ]
       };
 
-      var ctx = $("#mygraph");
+      var ctx = $("#graphique");
 
       var barGraph = new Chart(ctx, {
         type: 'bar',

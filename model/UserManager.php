@@ -89,6 +89,7 @@ class UserManager extends Manager
         return $userListTest;
     }
 
+
     public function addAMessage($message_content, $type_problem){
         $db = $this->dbConnect();
         $newMessage = $db ->prepare('INSERT INTO message(email_center, email_user, message_content, type_problem, date_and_time)
