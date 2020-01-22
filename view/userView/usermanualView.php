@@ -23,5 +23,5 @@
 		<br>
 	</form>
 <?php $content = ob_get_clean();
-require ('templateView.php')?>
+require('templateView.php') ?>
 </body>

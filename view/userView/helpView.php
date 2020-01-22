@@ -35,7 +35,7 @@
 
 <p><center><a href="./index.php?action=help&amp;action2=message" style="text-decoration:none"><input type="submit" value="Message" class="bouton"/></a></center></p>
 <?php $content = ob_get_clean();
-require ('templateView.php'); ?>
+require('templateView.php'); ?>
 </body>
 </html>
 
