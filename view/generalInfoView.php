@@ -30,7 +30,8 @@ $userData = $user->fetch();
             ?>
         </div>
         <div id="bouton">
-            <input type="button" value="EDIT">
+            <a href="./index.php?action=editYourProfilView"><input type="button" value="EDIT"/></a>
+
         </div>
     </div>
     <div id="liste_tests">

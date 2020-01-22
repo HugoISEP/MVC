@@ -63,6 +63,8 @@ try {
                 userManual();
             } elseif ($_GET['action'] == 'projectDisplay'){
                 projectDisplay();
+            } elseif ($_GET['action'] == 'editYourProfilView'){
+                editYourProfil();
             }
             else{
                 throw new Exception('page not found');

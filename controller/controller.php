@@ -122,3 +122,7 @@ function userManual(){
 function projectDisplay(){
     require ('view/projectdisplayView.php');
 }
+
+function editYourProfil(){
+    require ('view/editYourProfilView.php');
+}
