@@ -1,0 +1,103 @@
+header {
+	margin : 2%;
+	font-size : 40px;
+	text-align : center;
+}
+
+input {
+	padding-left : 10px;
+	padding-top : 4px;
+	display: flex;
+	flex : 2;
+    font-family: manjari;
+	color : black;
+	outline: none; /* Enleve le contour de base autour du bouton */
+	height : 40px;
+    font-weight: bold;
+	font-size : 20px;
+	border-radius : 100px;
+	border : 2px solid grey;
+}
+
+/* FORM{ */
+	/* display: flex; */
+	/* flex : 2; */
+	/* height : 40px; */
+    /* font-weight: bold; */
+	/* border-radius : 100px; */
+	/* border : 2px solid grey; */
+/* } */
+
+select {
+	font-family: manjari;
+	flex : 2;
+	color : black;
+	width : 100%;
+	border-radius : 100px;
+	border : 2px solid grey;
+	outline: none; /* Enleve le contour de base autour du bouton */
+	height : 40px;
+    font-weight: bold;
+	font-size : 20px;
+}
+
+
+.precedent {
+	margin-right : 100%;
+}
+
+
+ul {
+	justify-content : center;
+	width : 80%;
+	height : 80%;
+}
+
+
+li {
+	display : flex;
+	flex-direction : row;
+}
+
+.ZoneTexte {
+	flex : 1;
+	padding-left : 30%;
+	font-size : 20px;
+}
+
+button {
+	font-family: manjari;
+	color : black;
+	border-radius : 100px;
+	border : 2px solid black;
+	outline: none; /* Enleve le contour de base autour du bouton */
+	height : 40px;
+	width : 200px;
+    font-weight: bold;
+	font-size : 20px;
+}
+
+form {
+	margin-top : 4%;
+}
+
+
+.BasDePage {
+	margin-top : 4%;
+	display : flex;
+	flex-direction : row;
+}
+
+.EspVide {
+	flex : 1;
+}
+
+.boutonBDP{
+	flex:1;
+}
+
+
+
+
+
+

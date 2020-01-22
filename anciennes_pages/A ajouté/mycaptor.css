@@ -1,0 +1,47 @@
+.titre1captors{
+	text-align: center;
+	padding-top: 50px;
+
+}
+
+input{
+
+	border-radius: 50px;
+	height: 20px;
+	width: 30%;
+
+}
+.idoui{
+	padding-top: 20px;
+	text-align: center;
+}
+.box{
+margin-left: 25%;
+	height: 300px;
+	width: 800px;
+	overflow: auto;
+	border: black 2px solid;
+
+	}
+.souspartie{
+	border: black 1px solid;
+	height: 25px;
+
+}
+.captors{	margin-left: 5%;
+	padding-top: 150px; 
+
+
+}
+.idcaptors{
+		margin-left: 300px;
+		padding-top: 150px; 
+
+}
+
+.titlenice{
+	margin-left: 26%;
+	font-weight: bold;
+	font-size: large;
+
+}

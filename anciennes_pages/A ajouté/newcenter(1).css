@@ -1,0 +1,32 @@
+.title{
+	text-align: center;
+}
+.inputnc
+{
+	outline: none;
+	margin-left: 25%;
+	border-radius: 100px;
+	height: 20px;
+	width: 50%;
+	margin-top:10px;
+}
+.secretq{
+	margin-left: 25%;
+	border-radius: 100px;
+	height: 18px;
+	width: 50%;
+		outline: none;
+
+}
+.dataname{
+	margin-left: 25%;
+		outline: none;
+}
+button{
+	margin-left: 48%;
+
+}
+.datenc{	margin-left: 25%;
+		outline: none;
+	
+}

@@ -61,7 +61,9 @@ function createNewClient($first_name, $last_name, $email, $email_center, $gender
 
     $newClientData = $userManager->addNewClient($first_name, $last_name, $email, $email_center, $gender, $password, $phone_number, $birth, $photo);
     if ($newClientData == false){
-        throw new Exception('Error new client');
+        require ('view/404View.php');
+        throw new Exception('ERROR 404');
+
     }
     else {
         header ('Location: index.php');
@@ -85,7 +87,9 @@ function writeAMessage($message_content, $type_problem){
     $userManager = new UserManager();
     $newMessageData = $userManager->addAMessage($message_content, $type_problem);
     if ($newMessageData == false){
-        throw new Exception('Error write a message');
+        require ('view/404View.php');
+        throw new Exception('ERROR 404');
+
     }
     else {
         header('Location: index.php?action=help&action2=message');
@@ -96,7 +100,9 @@ function writeAMessageInForum($text){
     $userManager = new UserManager();
     $newMessageInForum = $userManager->addAMessageInForum($text);
     if ($newMessageInForum == false){
-        throw new Exception('Error write a message in forum');
+        require ('view/404View.php');
+        throw new Exception('ERROR 404');
+
     }
     else {
         header('Location: index.php?action=help&action2=forum');
