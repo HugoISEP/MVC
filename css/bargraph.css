@@ -1,0 +1,18 @@
+.graphique_css {
+    width: 640px;
+    height: auto;
+    margin-left:25%;
+    margin-right:15%;
+    margin-top:10%;
+    margin-top:10%;
+}
+
+
+#bouton_graphique {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5%;
+}
