@@ -80,11 +80,11 @@
 
 <script type="text/javascript">
     function validate(){
-        var a = document.getElementById('password').value;
-        var b = document.getElementById('confirm_password').value;
+        var a = this.getElementById('password').value;
+        var b = this.getElementById('confirm_password').value;
 
         if (a!==b){
             alert('Les mots de passes ne correspondent pas !')
             return false
     }
-    </script>
+</script>
