@@ -1,0 +1,60 @@
+input {
+	border-radius: 100px;
+	width:180px;}
+
+.box{
+margin-left: 25%;
+	height: 300px;
+	width: 800px;
+	overflow: auto;
+	border: black 2px solid;
+
+
+
+}
+.id_center{
+	margin-left: 3%
+}
+label{
+	margin-left: 17%;
+}
+.titre1center{
+	margin-left: 45%;
+}
+.typecenter{
+		margin-left: 3%;
+
+}
+.phonenum{
+	margin-left: 3%;
+
+}
+.titlenice{
+	margin-left: 26%;
+	font-weight: bold;
+	font-size: large;
+
+}
+.souspartie{
+	border: black 1px solid;
+	height: 25px;
+
+}
+.namecen{	margin-left: 5%;
+	padding-top: 150px; 
+
+
+}
+.mailcen{
+		margin-left: 15%;
+		padding-top: 150px; 
+
+}
+.phonecen{
+		margin-left: 13%;
+		padding-top: 150px; 
+}
+.typecen{
+		margin-left: 13%;
+		padding-top: 150px; 
+}

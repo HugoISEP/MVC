@@ -1,0 +1,36 @@
+.dataname{
+
+	margin-left: 25%
+}
+.ans{
+	width: 50%;
+	height: 250px;
+	margin-left: 25%;
+	border-radius: 5px;
+	outline: none;
+
+
+}
+.tp{
+width: 40%;
+border-radius: 5px;
+outline: none;
+}
+
+
+.namef{
+	border-radius: 5px;
+	outline: none;
+
+}
+.ti{
+	text-align: center;
+	padding-bottom: 50px;
+
+}
+.bouton
+{
+	border-radius: 20px;
+	width: 50px;
+	
+}
