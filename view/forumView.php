@@ -15,7 +15,7 @@
 </form>
 <?php
 while($messages = $listMessagesForum-> fetch()){
-    echo $messages['first_name'] . ' : ' . $messages['text'] . ' ' . $messages['date_and_time'];
+    echo '<p>' . $messages['first_name'] . ' : ' . $messages['text'] . ' ' . $messages['date_and_time'] . '</p>';
 }
 ?>
 <?php $content = ob_get_clean();
