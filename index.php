@@ -64,16 +64,20 @@ try {
             } elseif ($_GET['action'] == 'projectDisplay'){
                 projectDisplay();
             }
+            else{
+                throw new Exception('page not found');
+            }
         }
         elseif (!isset($_GET['action'])){
             header('Location: index.php?action=generalInfo');
         }
-    }
-
-    else{
-        require('view/404View.php');
-        throw new Exception('ERROR 404');
+        else{
+            throw new Exception('page not found');
+        }
+    } else{
+        throw new Exception('page not found');
     }
 } catch (Exception $e) {
+    require('view/404View.php');
     echo $e ->getMessage();
 }
