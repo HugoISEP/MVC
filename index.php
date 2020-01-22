@@ -31,21 +31,24 @@ try {
             } elseif ($_GET['action'] == 'newTest'){
                 newTest();
             } elseif ($_GET['action'] == 'help'){
-                if(isset($_GET['action2']) && $_GET['action2'] == 'message'){
-                    if(isset($_POST['typeOfProblem']) && isset($_POST['problemExplenation'])){
-                        writeAMessage($_POST['problemExplenation'], $_POST['typeOfProblem']);
-                    }
-                    else{
-                        message();
-                    }
-                } elseif(isset($_GET['action2']) && $_GET['action2'] == 'forum'){
-                    if(isset($_POST['messageForum'])){
-                        writeAMessageInForum($_POST['messageForum']);
+                if(isset($_GET['action2'])) {
+                    if ($_GET['action2'] == 'message') {
+                        if (isset($_POST['typeOfProblem']) && isset($_POST['problemExplenation'])) {
+                            writeAMessage($_POST['problemExplenation'], $_POST['typeOfProblem']);
+                        } else {
+                            message();
+                        }
+                    } elseif ($_GET['action2'] == 'forum') {
+                        if (isset($_POST['messageForum'])) {
+                            writeAMessageInForum($_POST['messageForum']);
+                        } else {
+                            forum();
+                        }
+                    } elseif ($_GET['action2'] == 'faq') {
+                        faq();
                     } else {
-                        forum();
+                        throw new Exception("page not found");
                     }
-                } elseif(isset($_GET['action2']) && $_GET['action2'] == 'faq'){
-                    faq();
                 }
                 else{
                     help();
