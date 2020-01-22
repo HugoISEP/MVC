@@ -108,3 +108,11 @@ function forum(){
     $listMessagesForum = $userManager->getMessagesForum();
     require ('view/forumView.php');
 }
+
+function userManual(){
+    require ('view/usermanualView.php');
+}
+
+function projectDisplay(){
+    require ('view/projectdisplayView.php');
+}

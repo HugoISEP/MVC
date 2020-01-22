@@ -27,8 +27,8 @@
 			
 			<li class = "About_Us"><a href="#">About Us</a>
 			<ul class="submenu">
-				<li><a href="#">User Manual</a></li>
-				<li><a href="#">Project Display</a></li>
+				<li><a href="./index.php?action=userManual">User Manual</a></li>
+				<li><a href="./index.php?action=projectDisplay">Project Display</a></li>
 			</ul>
 			</li>
 			<li class = "Contact_Us"><a href="./index.php?action=contactUs">Contact Us</a>

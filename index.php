@@ -40,7 +40,7 @@ try {
                     }
                 } elseif(isset($_GET['action2']) && $_GET['action2'] == 'forum'){
                     if(isset($_POST['messageForum'])){
-
+                        writeAMessageInForum($_POST['messageForum']);
                     } else {
                         forum();
                     }
@@ -56,6 +56,10 @@ try {
                 logOut();
             } elseif ($_GET['action'] == 'faq'){
                 faq();
+            } elseif ($_GET['action'] == 'userManual'){
+                userManual();
+            } elseif ($_GET['action'] == 'projectDisplay'){
+                projectDisplay();
             }
         }
         elseif (!isset($_GET['action'])){

@@ -16,9 +16,9 @@
 <center><form method="post" action="index.php?action=help&amp;action2=message">
 <center><p class="typeofproblem">Type of the problem :                               
 		<select name="typeOfProblem" id="typeOfProblem" required>
-			<option value="debut" selected disabled>Choose...</option>
-			<option value="temperature">Temperature sensor</option>
-			<option value="heartbeats sensor">Heartbeat sensor</option>
+			<option value="Beginning" selected disabled>Choose...</option>
+			<option value="Temperature">Temperature sensor</option>
+			<option value="Heartbeats sensor">Heartbeat sensor</option>
 			<option value="Microphone">Microphone</option>
 		</select>
 	</p></center>
