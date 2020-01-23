@@ -8,6 +8,5 @@ class CenterManager extends Manager
 
         $centers = $db->query('SELECT * FROM center');
         return $centers;
-
-}
+    }
 }
