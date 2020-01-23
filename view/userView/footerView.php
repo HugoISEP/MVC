@@ -8,7 +8,7 @@
 <body class="Footer">
 <footer>
     <div id="autre">
-        <a href="#">Legal Notice</a>
+        <a href="index.php?action=cgu">Legal Notice</a>
     </div>
     <div id="bloc_réseaux_sociaux">
     <h3>Follow us on our social networks</h3>

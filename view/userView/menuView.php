@@ -20,7 +20,7 @@
 			<ul class="submenu">
 				<li><a href="./index.php?action=generalInfo">General Info</a></li>
 				<li><a href="./index.php?action=generalData">General Data</a></li>
-				<li><a href="./index.php?action=newTest"">New Test</a></li>
+				<li><a href="./index.php?action=newTest">New Test</a></li>
 				<li><a href="./index.php?action=help">Help</a></li>
 			</ul>
 			</li>

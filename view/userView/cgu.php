@@ -2,11 +2,12 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="cgu.css">
+    <link rel="stylesheet" href="./css/cgu.css">
 </head>
 
 <body>
 
+<?php ob_start();?>
 
 <p>
 
@@ -35,5 +36,7 @@
     Le site et ses différents services peuvent être interrompus ou suspendus par l’Editeur, notamment à l’occasion d’une maintenance, sans obligation de</br> préavis ou de justification.</br>
 </p>
 
+<?php $content = ob_get_clean();
+require('templateView.php') ?>
 </body>
 </html>

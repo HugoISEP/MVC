@@ -170,3 +170,7 @@ function editYourProfilUpdate($fisrtName,$lastName,$email,$password){
         throw new Exception('ERROR 404');
     }
 }
+
+function cgu(){
+    require('view/userView/cgu.php');
+}

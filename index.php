@@ -73,6 +73,8 @@ try {
                     } else{
                         editYourProfil();
                     }
+                } else if($_GET['action'] == 'cgu'){
+                    cgu();
                 } else {
                     throw new Exception('Page not found');
                 }
