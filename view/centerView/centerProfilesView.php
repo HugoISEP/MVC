@@ -35,7 +35,7 @@
     <div id="liste_people">
         <ol>
             <p>
-            <li>
+            <li class="CP">
                 <div class="description">
                     <h3>Fathi KADIR</h3><br />
                     score: 350<br />
@@ -46,7 +46,7 @@
                 </div>
             </li>
 <hr />
-            <li>
+            <li class="CP">
                 <div class="description">
                     <h3>Hugo CHEMILLIER</h3><br />
                     score: 300<br />
@@ -57,7 +57,7 @@
                 </div>
             </li>
 <hr />
-            <li>
+            <li class="CP">
                 <div class="description">
                     <h3>François LAMY</h3><br />
                     score: 200<br />
@@ -68,7 +68,7 @@
                 </div>
             </li>
 <hr />
-            <li>
+            <li class="CP">
                 <div class="description">
                     <h3>Hadrien FOURNIERE</h3><br />
                     score: 50<br />
