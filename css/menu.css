@@ -3,6 +3,7 @@ body{
 	padding: 0%;
 	/* background : linear-gradient(to top, white 20%, lightskyblue); */
 	background : lightgrey;
+	font-family: Manjari-Bold;
 }
 
 header{
@@ -189,9 +190,9 @@ color: black;
 }
 
 
-/*@font-face {*/
-/*	font-family: 'manjari';*/
-/*	src: url("../anciennes_pages/Settings/polices/manjari/Manjari-Bold.ttf") format("truetype");*/
+@font-face {
+	font-family: 'manjari';
+	src: url("../anciennes_pages/Settings/polices/manjari/Manjari-Bold.ttf") format("truetype");}
 /*	src: url("../anciennes_pages/Settings/polices/manjari/Manjari-Regular.ttf") format("truetype");*/
 /*	src: url("../anciennes_pages/Settings/polices/manjari/Manjari-Thin.ttf") format("truetype");*/
 /*	!*---------------------------------------------------------------------------------------------------------------------------------------------*!*/
