@@ -12,7 +12,7 @@
         <h1>NEW CLIENT</h1>
     </header>
     <section class="informations">
-        <form method="post" action="index.php?action=newClient" <!--onsubmit="return validate()" enctype="multipart/form-data"-->>
+        <form method="post" action="index.php?action=newClient" onclick="validate()" onsubmit="validate()" enctype="multipart/form-data">
             <fieldset class="box">
                 <label for="first_name">First Name</label> :
                 <input type="text" name="first_name" id="first_name" placeholder="Arthur" size="40" autofocus required/>
@@ -59,7 +59,7 @@
                 <br/>
                 <br/>
                 <label for="ID_photo">ID Photo</label> :
-                <input type="file" name="photo" id="ID_photo" value="Choose ...">
+                <input type="file" name="photo" id="ID_photo" value="Choose ..." required>
                 <br/>
                 <br/>
                 <br/>
@@ -80,11 +80,8 @@
 
 <script type="text/javascript">
     function validate(){
-        var a = this.getElementById('password').value;
-        var b = this.getElementById('confirm_password').value;
-
-        if (a!==b){
-            alert('Les mots de passes ne correspondent pas !')
-            return false
+        if (document.getElementById("password").value!==document.getElementById("confirm_password").value){
+            alert('Les mots de passes ne correspondent pas !');
+        }
     }
 </script>
