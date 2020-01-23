@@ -47,14 +47,14 @@ select {
 }
 
 
-ul {
+ul.ulEYP {
 	justify-content : center;
 	width : 80%;
 	height : 80%;
 }
 
 
-li {
+li.liEYP {
 	display : flex;
 	flex-direction : row;
 }

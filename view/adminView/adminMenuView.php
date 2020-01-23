@@ -2,12 +2,12 @@
 <head>
 	<title>Menu déroulant</title>
 	<meta charset="utf-8"/>
-	<link rel="stylesheet" href="Menu.css"/>
+	<link rel="stylesheet" href="./css/menu.css"/>
 </head>
 	<header>
 	<div class="poutre">
-		<div class="boutonMenu"><img id="BoutonMenuDeroulant" src="../Settings/menu.png"></div>
-		<div class="texteAdmin"><a href="../My account/help.php">Bonjour l'administrateur le plus beau</a></div>
+		<div class="boutonMenu"><img id="BoutonMenuDeroulant" src="./image/menu.png"></div>
+		<a href="#" class="texteAdmin"><div>Welcome, you are logged in as an administrator.</div></a>
 	</div>
 	
 	
@@ -16,7 +16,7 @@
 			<li class = "My_account"><a href="#">My account</a></li>
 			<li class = "About_Us"><a href="#">Centers</a></li>
 			<li class = "Contact_Us"><a href="#">Mailbox</a></li>
-			<li class="Log_Out"><a href="../Log out/deconnexion.php">Log out</a></li>
+			<li class="Log_Out"><a href="./Log out/deconnexion.php">Log out</a></li>
 		</ul>
 	</nav>
 	</header>

@@ -8,7 +8,6 @@
 <body class="Footer">
 <footer>
     <div id="autre">
-        <a href="#">Language</a>
         <a href="#">Legal Notice</a>
     </div>
     <div id="bloc_réseaux_sociaux">
