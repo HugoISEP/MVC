@@ -12,6 +12,16 @@ header{
 	right: 0 ;
 }
 
+header .texteAdmin {
+	flex : 1;
+	min-width: 180px;
+	padding-top : 8px;
+	border-left: 1px solid black; /*Separation des différentes rubriques*/
+	border-right: 1px solid black;
+	/* border-bottom : 2px solid black; */
+	justify-content : flex-end;
+	text-decoration : none;
+}
 
 
 header .poutre {

@@ -2,6 +2,7 @@
 require_once ('model/UserManager.php');
 require_once ('model/CenterManager.php');
 require_once ('model/ConnectionManager.php');
+require_once ('model/AdminManager.php');
 
 function connection(){
     require('view/userView/connexionView.php');
@@ -29,6 +30,15 @@ function userGeneralInfo(){
     $userListTests = $userManager->getUserListTests();
     require('view/userView/generalInfoView.php');
 }
+
+function adminGeneralInfo(){
+    $adminManager = new AdminManager();
+    $centers = new AdminManager();
+    $admin = $adminManager->getAdmin();
+    $listCenters = $centers->getCenters();
+    require ('view/adminView/adminGeneralInfoView.php');
+}
+
 
 function centerGeneralInfo(){
     $centerManager = new CenterManager();

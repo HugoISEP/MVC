@@ -24,7 +24,6 @@ $adminData = $admin->fetch();
             <?=
             "<ul>
                     <li>" . $adminData['name'] . "</li>
-                    <li>" . $adminData['email'] . "</li>
                 </ul>"
             ?>
         </div>
@@ -33,10 +32,32 @@ $adminData = $admin->fetch();
 
         </div>
     </div>
+    <div id="liste_tests">
+        <h1>Last tests</h1>
+        <?php
+        while ($centersData = $listCenters->fetch()) { ?>
+            <ol>
+                <li>
+                    <ul>
+                        <li><strong><?=  $centersData['name']?></strong></li>
+                        <li>type : <?= $centersData['type'] ?></li>
+                    </ul>
+                </li>
+            </ol>
+
+
+            <?php
+        }
+        $admin->closeCursor();
+        $listCenters->closeCursor();
+        ?>
+    </div>
+</div>
+    </div>
 </div>
 
 <?php $content = ob_get_clean();
-require('templateView.php'); ?>
+require('adminTemplateView.php'); ?>
 
 </body>
 </html>

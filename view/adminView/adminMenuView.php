@@ -7,7 +7,7 @@
 	<header>
 	<div class="poutre">
 		<div class="boutonMenu"><img id="BoutonMenuDeroulant" src="./image/menu.png"></div>
-		<a href="#" class="texteAdmin"><div>Welcome, you are logged in as an administrator.</div></a>
+		<a href="#" class="texteAdmin"><div><h1>Welcome, you are logged in as an administrator.</h1></div></a>
 	</div>
 	
 	

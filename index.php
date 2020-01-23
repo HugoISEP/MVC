@@ -1,6 +1,5 @@
 <?php
 session_start();
-/*lolimlp*/
 require_once('controller/controller.php');
 
 try {
@@ -78,7 +77,7 @@ try {
             }
 
 
-
+        //si l'utilisateur est un centre
         } elseif($_SESSION['userType'] == 'center'){
             if($_GET['action'] == 'generalInfo'){
                 centerGeneralInfo();
@@ -98,8 +97,14 @@ try {
             if ($_GET['action'] == 'logOut') {
                 logOut();
         }
+
+
+        //si l'utilisateur est un admin
         } elseif ($_SESSION['userType'] == 'admin'){
-            if ($_GET['action'] == 'logOut') {
+            if($_GET['action'] == 'generalInfo'){
+                adminGeneralInfo();
+            }
+            elseif ($_GET['action'] == 'logOut') {
                 logOut();
             }
         } else{
