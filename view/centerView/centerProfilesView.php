@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="profiles.css">
+    <link rel="stylesheet" href="./css/centerProfiles.css">
     <title>Profiles</title>
 </head>
 <body>
+<?php ob_start(); ?>
     <h1>PROFILES</h1>
     <div id="block_sort">
         <form method="post" action="">
@@ -82,7 +83,9 @@
     </div>
     <hr />
 <div id="bouton_search_a_profile">
-    <a href="search_a_profile.html"><input type="button" value="Search a profile"></a>
+    <a href="index.php?action=profiles&amp;action2=searchProfiles"><input type="button" value="Search a profile"></a>
 </div>
+<?php $content = ob_get_clean();
+require('centerTemplateView.php') ?>
 </body>
 </html>
