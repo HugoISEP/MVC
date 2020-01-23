@@ -9,12 +9,12 @@
     Edit Your Profile
 </h3>
 <ul>
-	<FORM>
-		<li><h1 class="ZoneTexte">First Name</h1><input name="FirstName" value="<?php echo $_SESSION['first_Name'] ?>"/></li>
-		<li><h1 class="ZoneTexte">Last Name</h1><input name="LastName" value="<?php echo $_SESSION['last_Name'] ?>"/></li>
-		<li><h1 class="ZoneTexte">E-mail Adress</h1><input name="EmailAdress" value="<?php echo $_SESSION['email_user'] ?>"/></li>
-		<li><h1 class="ZoneTexte">Password</h1><input name="Password"/></li>
-		<li><h1 class="ZoneTexte">Confirm Password</h1><input name="ConfirmPassword"/></li>
+	<FORM action="./index.php?action=action2=update">
+		<li><h1 class="ZoneTexte">First Name</h1><input name="first_name" value="<?php echo $_SESSION['first_Name'] ?>"/></li>
+		<li><h1 class="ZoneTexte">Last Name</h1><input name="last_name" value="<?php echo $_SESSION['last_Name'] ?>"/></li>
+		<li><h1 class="ZoneTexte">E-mail Adress</h1><input name="email" value="<?php echo $_SESSION['email_user'] ?>"/></li>
+		<li><h1 class="ZoneTexte">Password</h1><input name="password"/></li>
+		<li><h1 class="ZoneTexte">Confirm Password</h1><input name="confirmPassword"/></li>
 		<li><h1 class="ZoneTexte">Secret Question</h1>
 				<select name="Question_secrete" size="1">
 					<OPTION>What was the name of your first pet?

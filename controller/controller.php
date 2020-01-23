@@ -137,3 +137,12 @@ function projectDisplay(){
 function editYourProfil(){
     require('view/userView/editYourProfilView.php');
 }
+
+function editYourProfilUpdate($fisrtName,$lastName,$email,$pass){
+    $userManager = new UserManager();
+    if($fisrtName != $_SESSION['first_Name']){
+        $update = $userManager->updateProfil("firstName", $fisrtName);
+    } elseif ($lastName == $_SESSION['last_Name']){
+
+    }
+}

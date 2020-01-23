@@ -69,4 +69,12 @@ class UserManager extends Manager
         $messagesForum->execute(array(1));
         return $messagesForum;
     }
+
+    public function updateProfil($info, $edit){
+        $db = $this->dbConnect();
+        if($info == "fisrtName"){
+            $update = $db->prepare('UPDATE users SET first_name = ? WHERE email= ?');
+            $update->execute(array($edit,$_SESSION['email']));
+        }
+    }
 }
