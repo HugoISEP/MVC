@@ -4,16 +4,16 @@
 	<link rel="stylesheet" href="styleEYPG.css"/>
 </head>
 <body>
-<ul>
+<ul class="ulEYP">
 <header>Edit Your Profile
 </header>
 	<FORM>
-		<li><h1 class="ZoneTexte">First Name</h1><input name="FirstName"></input></li>
-		<li><h1 class="ZoneTexte">Last Name</h1><input name="LastName"></input></li>
-		<li><h1 class="ZoneTexte">E-mail Adress</h1><input name="EmailAdress"></input></li>
-		<li><h1 class="ZoneTexte">Password</h1><input name="Password"></input></li>
-		<li><h1 class="ZoneTexte">Confirm Password</h1><input name="ConfirmPassword"></input></li>
-		<li><h1 class="ZoneTexte">Secret Question</h1>
+		<li class="liEYP"><h1 class="ZoneTexte">First Name</h1><input name="FirstName"></input></li>
+		<li class="liEYP"><h1 class="ZoneTexte">Last Name</h1><input name="LastName"></input></li>
+		<li class="liEYP"><h1 class="ZoneTexte">E-mail Adress</h1><input name="EmailAdress"></input></li>
+		<li class="liEYP"><h1 class="ZoneTexte">Password</h1><input name="Password"></input></li>
+		<li class="liEYP"><h1 class="ZoneTexte">Confirm Password</h1><input name="ConfirmPassword"></input></li>
+		<li class="liEYP"><h1 class="ZoneTexte">Secret Question</h1>
 				<select name="Question_secrete" size="1">
 					<OPTION>What was the name of your first pet?
 					<OPTION>What was your maiden name?
@@ -21,7 +21,7 @@
 					<OPTION>What's your favorite color?
 				</select>		
 		</li>
-		<li><h1 class="ZoneTexte">Secret Answer</h1><input></input></li>
+		<li class="liEYP"><h1 class="ZoneTexte">Secret Answer</h1><input></input></li>
 		<div class="BasDePage">
 			<div class="EspVide"></div>
 			<div class="EspVide"></div>

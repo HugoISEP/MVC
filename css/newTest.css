@@ -30,7 +30,6 @@
 .bouton:hover {
     padding: 6px;
     width: 100px;
-    font: bold 13px "Courier New";
     background: #478bf9;
     color: #fff;
     border-radius: 2px;

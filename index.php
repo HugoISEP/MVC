@@ -63,11 +63,18 @@ try {
                 } elseif ($_GET['action'] == 'projectDisplay') {
                     projectDisplay();
                 } elseif ($_GET['action'] == 'editYourProfilView'){
-                    if(isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email']) && isset($_POST['password'])) {
-                        editYourProfilUpdate($_POST['first_name'], $_POST['last_name'], $_POST['email'], $_POST['password']);
+                    if(isset($_GET['action2']) && $_GET['action2'] == 'update') {
+                        if(isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email']) && isset($_POST['password'])) {
+                            editYourProfilUpdate($_POST['first_name'], $_POST['last_name'], $_POST['email'], $_POST['password']);
+                        }else{
+                            editYourProfil();
+                        }
                     } else{
                         editYourProfil();
-                    }            } else {
+                    }
+                } else if($_GET['action'] == 'cgu'){
+                    cgu();
+                } else {
                     throw new Exception('Page not found');
                 }
             } elseif (!isset($_GET['action'])) {
