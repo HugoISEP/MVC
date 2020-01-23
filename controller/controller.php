@@ -19,15 +19,23 @@ function tryConnection($emailTest, $passwordTest){
     }
 }
 
-function generalData(){
+function userGeneralData(){
     require('view/userView/generalDataView.php');
 }
 
-function generalInfo(){
+function userGeneralInfo(){
     $userManager = new UserManager();
     $user = $userManager -> getUser();
     $userListTests = $userManager->getUserListTests();
     require('view/userView/generalInfoView.php');
+}
+
+function centerGeneralInfo(){
+    $centerManager = new CenterManager();
+    $tests = new CenterManager();
+    $center = $centerManager->getCenter();
+    $listTests = $tests->getUserTests();
+    require ('view/centerView/centerGeneralInfoView.php');
 }
 
 function newTest(){
@@ -110,6 +118,7 @@ function writeAMessageInForum($text){
         header('Location: index.php?action=help&action2=forum');
     }
 }
+
 
 function forum(){
     $userManager = new UserManager();

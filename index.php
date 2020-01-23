@@ -14,6 +14,7 @@ try {
     }
     //Sinon si l'utilisateur n'est pas connecté et qu'il a cliqué sur "new client"
     elseif ($_GET['action'] == 'newClient' && !isset($_SESSION['email_user'])){
+
         if (isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email']) && isset($_POST['email_center']) && isset($_POST['gender']) && isset($_POST['password']) && $_POST['phone_number'] &&  $_POST['birth'] && isset($_FILES['photo'])) {
             createNewClient($_POST['first_name'], $_POST['last_name'], $_POST['email'], $_POST['email_center'], $_POST['gender'], $_POST['password'], $_POST['phone_number'], $_POST['birth'], $_FILES['photo']);
         } else {
@@ -21,13 +22,13 @@ try {
         }
     }
     //Si l'utilisateur est connecté
-    elseif (isset($_SESSION['email_user'])) {
+    elseif (isset($_SESSION['email_user']) || isset($_SESSION['email_center']) || isset($_SESSION['email_admin'])) {
         if ($_SESSION['userType'] == 'user') {
             if (isset($_GET['action'])) {
                 if ($_GET['action'] == 'generalInfo') {
-                    generalInfo();
+                    UserGeneralInfo();
                 } elseif ($_GET['action'] == 'generalData') {
-                    generalData();
+                    UserGeneralData();
                 } elseif ($_GET['action'] == 'newTest') {
                     newTest();
                 } elseif ($_GET['action'] == 'help') {
@@ -73,9 +74,12 @@ try {
                 throw new Exception('Page not found');
             }
         } elseif($_SESSION['userType'] == 'center'){
+            if($_GET['action'] == 'generalInfo'){
+                centerGeneralInfo();
+            }
             if ($_GET['action'] == 'logOut') {
                 logOut();
-            }
+        }
         } elseif ($_SESSION['userType'] == 'admin'){
             if ($_GET['action'] == 'logOut') {
                 logOut();
@@ -88,6 +92,6 @@ try {
         throw new Exception('page not found');
     }
 } catch (Exception $e) {
-    require('view/userView/404View.php');
+    require('view/404View.php');
     echo $e ->getMessage();
 }

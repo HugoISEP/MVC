@@ -9,7 +9,7 @@
 <body>
 <?php ob_start(); ?>
 <?php
-$userData = $user->fetch();
+$centerData = $center->fetch();
 ?>
 
 
@@ -23,9 +23,8 @@ $userData = $user->fetch();
         <div id="infos_complementaires">
             <?=
             "<ul>
-                    <li>" . $userData['last_name'] . "</li>
-                    <li>" . $userData['first_name'] . "</li>
-                    <li>" . $userData['birthday'] . "</li>
+                    <li>" . $centerData['name'] . "</li>
+                    <li>" . $centerData['type'] . "</li>
                 </ul>"
             ?>
         </div>
@@ -37,15 +36,13 @@ $userData = $user->fetch();
     <div id="liste_tests">
         <h1>Last tests</h1>
         <?php
-        $nb = 1;
-        while ($userListTestsData = $userListTests->fetch()) { ?>
+        while ($userListTestsData = $listTests->fetch()) { ?>
             <ol>
                 <li>
                     <ul>
-                        <li><strong>Test n° <?= $nb ?></strong></li>
+                        <li><strong><?=  $userListTestsData['first_name'].' ' . $userListTestsData['last_name']?></strong></li>
                         <li>captor type : <?= $userListTestsData['type'] ?></li>
-                        <li>result : <?= $userListTestsData['measure_value'] ?></li>
-                        <li>result : <?= $userListTestsData['measure_unit'] ?></li>
+                        <li>result : <?= $userListTestsData['measure_value'] ?> <?= $userListTestsData['measure_unit'] ?></li>
                         <li>date : <?= $userListTestsData['date_and_time'] ?></li>
                     </ul>
                 </li>
@@ -53,15 +50,14 @@ $userData = $user->fetch();
 
 
             <?php
-            $nb++;
         }
-        $user->closeCursor();
-        $userListTests->closeCursor();
+        $center->closeCursor();
+        $listTests->closeCursor();
         ?>
     </div>
 </div>
     <?php $content = ob_get_clean();
-    require('templateView.php'); ?>
+    require('centerTemplateView.php'); ?>
 
 </body>
 </html>
