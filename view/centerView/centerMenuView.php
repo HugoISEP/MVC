@@ -7,9 +7,9 @@
 	<header>
 	<div class="poutre">
 		<div class="boutonMenu"><img id="BoutonMenuDeroulant" src="./image/menu.png"></div>
-		<div class="texte"><a href="../My account/general info.php">General Info</a></div>
-		<div class="texte"><a href="../My account/General data.php">Data</a></div>
-		<div class="texte"><a href="../My account/newtest.php">Search</a></div>
+        <a href="#"><div class="texte"><h1>General Info</h1></div></a>
+        <a href="#"><div class="texte"><h1>Data</h1></div></a>
+		<a href="#"><div class="texte"><h1>Search</h1></div></a>
 	</div>
 	
 	
