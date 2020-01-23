@@ -7,7 +7,7 @@
 }
 
 footer {
-    position: relative;
+    position: absolute;
     color: white;
     display: flex;
     bottom : 0;
