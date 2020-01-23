@@ -73,9 +73,24 @@ try {
             } else {
                 throw new Exception('Page not found');
             }
+
+
+
         } elseif($_SESSION['userType'] == 'center'){
             if($_GET['action'] == 'generalInfo'){
                 centerGeneralInfo();
+            } if($_GET['action'] == 'generalData'){
+                centerGeneralData();
+            } if($_GET['action'] == 'profiles'){
+                if(isset($_GET['action2'])){
+                    if($_GET['action2'] == 'searchProfiles'){
+                        centerSearchProfiles();
+                    } else{
+                        throw new Exception();
+                    }
+                } elseif (!isset($_GET['action2'])){
+                    centerProfiles();
+                }
             }
             if ($_GET['action'] == 'logOut') {
                 logOut();

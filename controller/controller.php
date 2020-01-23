@@ -38,6 +38,19 @@ function centerGeneralInfo(){
     require ('view/centerView/centerGeneralInfoView.php');
 }
 
+function centerProfiles(){
+    require ('view/centerView/centerProfilesView.php');
+}
+
+
+function centerGeneralData(){
+    require ('view/centerView/centerGeneralDataView.php');
+}
+
+function centerSearchProfiles(){
+    require ('view/centerView/centerSearchProfilesView.php');
+}
+
 function newTest(){
     require('view/userView/newTestView.php');
 }
