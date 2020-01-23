@@ -12,7 +12,7 @@
         <h1>NEW CLIENT</h1>
     </header>
     <section class="informations">
-        <form method="post" action="index.php?action=newClient" onclick="validate()" onsubmit="validate()" enctype="multipart/form-data">
+        <form method="post" action="index.php?action=newClient" onsubmit =  "return validate()" enctype="multipart/form-data">
             <fieldset class="box">
                 <label for="first_name">First Name</label> :
                 <input type="text" name="first_name" id="first_name" placeholder="Arthur" size="40" autofocus required/>
@@ -80,8 +80,11 @@
 
 <script type="text/javascript">
     function validate(){
-        if (document.getElementById("password").value!==document.getElementById("confirm_password").value){
+        if (document.getElementById("password")!==document.getElementById("confirm_password")) {
             alert('Les mots de passes ne correspondent pas !');
+            return false;
+        }else {
+            return true;
         }
     }
 </script>

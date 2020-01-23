@@ -73,9 +73,9 @@ try {
                 throw new Exception('Page not found');
             }
         } elseif($_SESSION['userType'] == 'center'){
-        if ($_GET['action'] == 'logOut') {
-            logOut();
-        }
+            if ($_GET['action'] == 'logOut') {
+                logOut();
+            }
         } elseif ($_SESSION['userType'] == 'admin'){
             if ($_GET['action'] == 'logOut') {
                 logOut();
