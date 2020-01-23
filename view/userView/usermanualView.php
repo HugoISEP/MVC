@@ -16,9 +16,7 @@
 <?php ob_start(); ?>
 	<form method="post">
 	<h2 class="titi"> USER MANUAL </h2>
-	<div class="information">
-	 Les informations seront mise à jour lorsque nous suarons comment fontionne la carte électronique qui sera relié au site
-    </div>
+	<div class="information">The information will be updated during the implementation with the electronic card that will be connected to the site.</div>
 		<br>
 		<br>
 	</form>
