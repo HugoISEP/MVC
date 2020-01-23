@@ -17,8 +17,8 @@ class ConnectionManager extends Manager
         $user->execute(array('email'=>$emailTest));
         $userData = $user->fetch();
         if ($userData['password'] == $passwordTest) {
-            $_SESSION['email_user'] = $userData['email'];
-            $_SESSION['email_center'] = $userData['email_center'];
+            $_SESSION['email_admin'] = $userData['email'];
+            $_SESSION['name'] = $userData['name'];
             $_SESSION['userType'] = 'admin';
             return true;
         }
@@ -27,8 +27,8 @@ class ConnectionManager extends Manager
         $user->execute(array('email'=>$emailTest));
         $userData = $user->fetch();
         if ($userData['password'] == $passwordTest) {
-            $_SESSION['email_user'] = $userData['email'];
-            $_SESSION['email_center'] = $userData['email_center'];
+            $_SESSION['email_center'] = $userData['email'];
+            $_SESSION['name'] = $userData['name'];
             $_SESSION['userType'] = 'center';
             return true;
         }
@@ -39,6 +39,8 @@ class ConnectionManager extends Manager
         if ($userData['password'] == $passwordTest) {
             $_SESSION['email_user'] = $userData['email'];
             $_SESSION['email_center'] = $userData['email_center'];
+            $_SESSION['first_Name'] = $userData['first_name'];
+            $_SESSION['last_Name'] = $userData['last_name'];
             $_SESSION['userType'] = 'user';
             return true;
         }

@@ -16,9 +16,11 @@
     flex-wrap: wrap;
 }
 
-#photo{
+#infos_complementaires
+{
     margin-left: 22%;
 }
+
 
 #infos_personnelles h1{
     width: 60vh;
@@ -58,4 +60,7 @@
 
 h1{
     text-align: center;
+}
+.textea{
+    font-size: 120%;
 }
