@@ -16,6 +16,7 @@
         <label for="email">Email</label>  <input type="email" name="email" id="email" />
         <input type="button" value="Research" />
     </form>
+
     </p>
 </div>
 <hr />
