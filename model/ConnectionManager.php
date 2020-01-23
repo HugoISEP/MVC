@@ -41,6 +41,7 @@ class ConnectionManager extends Manager
             $_SESSION['email_center'] = $userData['email_center'];
             $_SESSION['first_Name'] = $userData['first_name'];
             $_SESSION['last_Name'] = $userData['last_name'];
+            $_SESSION['password'] = $userData['password'];
             $_SESSION['userType'] = 'user';
             return true;
         }

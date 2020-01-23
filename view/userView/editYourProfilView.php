@@ -21,17 +21,19 @@
 					<OPTION>What was your maiden name?
 					<OPTION>What was the model of your first car?
 					<OPTION>What's your favorite color?
-				</select>		
+				</select>
+
 		</li>
 		<li class="liEYP" ><h1 class="ZoneTexte">Secret Answer</h1><input name="secretAnswer"/></li>
 		<div class="BasDePage">
 			<div class="EspVide"></div>
 			<div class="EspVide"></div>
-			<button class="boutonBDP">Edit</button>
-			<div class="EspVide"></div>
+            <div class="EspVide"></div>
 			<button class="boutonBDP">Capteurs</button>
 		</div>
-	</FORM>
+        <input type="submit"  class="boutonBDP" value="Edit"/>
+
+    </FORM>
 </ul>
 <?php $content = ob_get_clean();
 require('templateView.php') ?>

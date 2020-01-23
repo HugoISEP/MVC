@@ -151,11 +151,22 @@ function editYourProfil(){
     require('view/userView/editYourProfilView.php');
 }
 
-function editYourProfilUpdate($fisrtName,$lastName,$email,$pass){
+function editYourProfilUpdate($fisrtName,$lastName,$email,$password){
     $userManager = new UserManager();
     if($fisrtName != $_SESSION['first_Name']){
         $update = $userManager->updateProfil("firstName", $fisrtName);
-    } elseif ($lastName == $_SESSION['last_Name']){
-
+    }
+    if ($lastName != $_SESSION['last_Name']){
+        $update = $userManager->updateProfil("lastName", $lastName);
+    }
+    if ($email != $_SESSION['email']){
+        $update = $userManager->updateProfil("email", $email);
+    }
+    if ($password !=  $_SESSION['password']){
+        $update = $userManager->updateProfil("lastName", $password);
+    }
+    if($update == false){
+        require('view/userView/404View.php');
+        throw new Exception('ERROR 404');
     }
 }
