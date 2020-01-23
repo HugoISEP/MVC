@@ -7,7 +7,7 @@
 </head>
 <body>
 <?php ob_start(); ?>
-    <h1>PROFILES</h1>
+    <h1 class="CP">PROFILES</h1>
     <div id="block_sort">
         <form method="post" action="">
             <p>

@@ -1,4 +1,4 @@
-h1{
+h1.CP{
     text-align: center;
     margin-bottom: 5%;
 }
@@ -43,7 +43,7 @@ li.CP{
     margin-top: 3%;
 }
 
-li + hr{
+li.CP + hr{
     width: 40%;
     color: black;
 }
