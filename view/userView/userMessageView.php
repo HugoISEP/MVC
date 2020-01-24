@@ -32,7 +32,7 @@
 <div class="message">
 <?php
 while ($messages = $listMessages->fetch()){
-if($messages['email_user'] == $_SESSION['email_user']){
+if($messages['autor'] == $_SESSION['email_user']){
             echo '<p>You :';
         } else{
             echo 'center :';
