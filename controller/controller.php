@@ -163,21 +163,27 @@ function editYourProfil(){
 
 function editYourProfilUpdate($fisrtName,$lastName,$email,$password){
     $userManager = new UserManager();
+
     if($fisrtName != $_SESSION['first_Name']){
         $update = $userManager->updateProfil("firstName", $fisrtName);
     }
     if ($lastName != $_SESSION['last_Name']){
         $update = $userManager->updateProfil("lastName", $lastName);
     }
-    if ($email != $_SESSION['email']){
+    if ($email != $_SESSION['email_user']){
         $update = $userManager->updateProfil("email", $email);
     }
     if ($password !=  $_SESSION['password']){
-        $update = $userManager->updateProfil("lastName", $password);
+        define("SUFFIXE","18fa73e0");
+        define("PREFIXE","47fc2ab9");
+        $password = SUFFIXE.hash("sha256",$password).PREFIXE;
+        $update = $userManager->updateProfil("password", $password);
     }
     if($update == false){
         require('view/userView/404View.php');
         throw new Exception('ERROR 404');
+    } else {
+        header('Location: index.php');
     }
 }
 
