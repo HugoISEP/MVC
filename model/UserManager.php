@@ -84,15 +84,24 @@ class UserManager extends Manager
             if ($update == true) {
                 $_SESSION['last_Name'] = $edit;
             }
-        } elseif ($info == "email"){
-            $update = $db->prepare('UPDATE users SET email = ? WHERE email= ?');
+        } elseif ($info == "birth"){
+            $update = $db->prepare('UPDATE users SET birthday = ? WHERE email= ?');
             $update->execute(array($edit,$_SESSION['email_user']));
             if ($update == true) {
-                $_SESSION['email_user'] = $edit;
+                $_SESSION['birthday'] = $edit;
+            }
+        } elseif ($info == "phone") {
+            $update = $db->prepare('UPDATE users SET phone_number = ? WHERE email= ?');
+            $update->execute(array($edit, $_SESSION['email_user']));
+            if ($update == true) {
+                $_SESSION['phone_number'] = $edit;
             }
         } elseif ($info == "password"){
             $update = $db->prepare('UPDATE users SET password = ? WHERE email= ?');
             $update->execute(array($edit,$_SESSION['email_user']));
+            if ($update == true) {
+                $_SESSION['password'] = $edit;
+            }
         }
         return $update;
     }

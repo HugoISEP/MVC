@@ -161,30 +161,33 @@ function editYourProfil(){
     require('view/userView/editYourProfilView.php');
 }
 
-function editYourProfilUpdate($fisrtName,$lastName,$email,$password){
+function editYourProfilUpdate($firstName,$lastName, $birthday, $phone_number, $password){
     $userManager = new UserManager();
+    $firstName = htmlspecialchars($firstName);
+    $lastName = htmlspecialchars($lastName);
+    $phone_number = htmlspecialchars($phone_number);
+    $birthday = htmlspecialchars($birthday);
 
-    if($fisrtName != $_SESSION['first_Name']){
-        $update = $userManager->updateProfil("firstName", $fisrtName);
+    if($firstName != $_SESSION['first_Name']){
+        $userManager->updateProfil("firstName", $firstName);
     }
     if ($lastName != $_SESSION['last_Name']){
-        $update = $userManager->updateProfil("lastName", $lastName);
+        $userManager->updateProfil("lastName", $lastName);
     }
-    if ($email != $_SESSION['email_user']){
-        $update = $userManager->updateProfil("email", $email);
+    if ($birthday != $_SESSION['birthday']){
+        $userManager->updateProfil("birth", $birthday);
+    }
+    if ($phone_number != $_SESSION['phone_number']){
+        $userManager->updateProfil("phone", $phone_number);
     }
     if ($password !=  $_SESSION['password']){
+        $password = htmlspecialchars($password);
         define("SUFFIXE","18fa73e0");
         define("PREFIXE","47fc2ab9");
         $password = SUFFIXE.hash("sha256",$password).PREFIXE;
-        $update = $userManager->updateProfil("password", $password);
+        $userManager->updateProfil("password", $password);
     }
-    if($update == false){
-        require('view/userView/404View.php');
-        throw new Exception('ERROR 404');
-    } else {
-        header('Location: index.php');
-    }
+    header('Location: index.php');
 }
 
 function cgu(){

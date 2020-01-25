@@ -24,9 +24,9 @@ $userData = $user->fetch();
             <?=
             "<ul>
                     <li>" . $userData['last_name'] . "</li>
-                    <li>" . $userData['email'] . "</li>
                     <li>" . $userData['first_name'] . "</li>
                     <li>" . $userData['birthday'] . "</li>
+                    <li>" . $userData['phone_number'] . "</li>
                 </ul>"
             ?>
         </div>

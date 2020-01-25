@@ -10,10 +10,11 @@
 </h3>
 <ul class = "ulEYP" >
 	<FORM method="post" action="./index.php?action=editYourProfilView&amp;action2=update">
-		<li class="liEYP"><h1 class="ZoneTexte">First Name</h1><input name="first_name" value="<?php echo $_SESSION['first_Name'] ?>"/></li>
-		<li class="liEYP"><h1 class="ZoneTexte">Last Name</h1><input name="last_name" value="<?php echo $_SESSION['last_Name'] ?>"/></li>
-		<li class="liEYP"><h1 class="ZoneTexte">E-mail Adress</h1><input name="email" value="<?php echo $_SESSION['email_user'] ?>"/></li>
-		<li class="liEYP"><h1 class="ZoneTexte">Password</h1><input type="password" name="password" value="<?php echo $_SESSION['password'] ?>"/></li>
+		<li class="liEYP"><h1 class="ZoneTexte">First Name</h1><input name="first_name" required value="<?php echo $_SESSION['first_Name'] ?>"/></li>
+		<li class="liEYP"><h1 class="ZoneTexte">Last Name</h1><input name="last_name" required value="<?php echo $_SESSION['last_Name'] ?>"/></li>
+		<li class="liEYP"><h1 class="ZoneTexte">Birthday</h1><input type="date" name="birthday" required value="<?php echo $_SESSION['birthday'] ?>"/></li>
+        <li class="liEYP"><h1 class="ZoneTexte">Phone Number</h1><input name="phone_number" required value="<?php echo $_SESSION['phone_number'] ?>"/></li>
+        <li class="liEYP"><h1 class="ZoneTexte">Password</h1><input type="password" name="password"value="<?php echo $_SESSION['password'] ?>"/></li>
 		<li class="liEYP"><h1 class="ZoneTexte">Confirm Password</h1><input name="confirmPassword"/></li>
 		<li class="liEYP"><h1 class="ZoneTexte">Secret Question</h1>
 				<select name="Question_secrete" size="1">
